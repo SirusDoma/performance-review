@@ -1,0 +1,52 @@
+en:
+  documentation:
+    api_name: 'Performance Review API'
+    api_description: |
+      API Documentation for Performance Review App.  
+      This application enable adminstrator to assign employees to review each other.
+    parameter:
+      offset: 'The offset of nth record that will be fetched first'
+      limit:  'The maximum number of data that will be returned'
+    authentication:
+      explanation: 'Provide authentication functions for employees or admin'
+      authenticate:
+        summary: 'Authenticate given email and password'
+        post: ''
+      change_password:
+        summary: 'Change password of authenticated user with given `new_password`'
+        patch: ''
+    assignments:
+      explanation: 'Provide functions to manage `Assignment` resources.'
+      resource:
+        summary: 'Provide functions to create and retrieve review assignments that assigned by an Administrator.'
+        post: 'Create a new assignment for specified employee as reviewer to review another employee'
+        get: |
+          Get list of assigned review by admin.  
+          It will return all assignments of every employee if authenticated user is an Administrator
+    employees:
+      explanation: 'Provide functions to manage `Employee` resources.'
+      resource:
+        summary: 'Provide functions to create and retrieve employee information.'
+        post: 'Register a new employe'
+        get: 'Get list of employees'
+      detail:
+        summary: 'Provide functions to manipulate employee information.'
+        patch: 'Update a employee that match with given id'
+    questions:
+      explanation: 'Provide functions to manage `Question` resources.'
+      resource:
+        summary: 'Provide functions to create and retrieve feedback questions that need to be answered by employees.'
+        post: 'Create a new feedback question with given description'
+        get: 'Get list of questions'
+      detail:
+        summary: 'Provide functions to manipulate feedback questions that need to be answered by assigned employees.'
+        patch: 'Update a question that match with given id'
+        delete: 'Delete a question that match with given id'
+    reviews:
+      explanation: 'Provide functions to manage `Review` resources.'
+      resource:
+        summary: 'Provide functions to post and retrieve feedback reviews that employees submitted.'
+        post: 'Post new review feedbacks for given set of questions'
+        get: |
+          Get list of submitted review.  
+          Administrator will be able to see reviews that submitted by any employees.

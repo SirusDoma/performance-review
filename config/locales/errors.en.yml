@@ -1,0 +1,22 @@
+en:
+  errors:
+    application:
+      message: 'Internal server error'
+      error_code: 10000
+      http_code: 422
+    unauthorized:
+      message: 'Unauthorized'
+      error_code: 10111
+      http_code: 401
+    forbidden:
+      message: 'Forbidden'
+      error_code: 11101
+      http_code: 403
+    invalid_parameter:
+      message: 'One or more specified parameters are invalid'
+      error_code: 10011
+      http_code: 400
+    resource_not_found:
+      message: '%{resource} cannot be found'
+      error_code: 11001
+      http_code: 404

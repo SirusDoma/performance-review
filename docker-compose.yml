@@ -1,0 +1,19 @@
+version: '3'
+services:
+  mysql:
+    image: mysql:latest
+    environment:
+      - MYSQL_ROOT_PASSWORD=${DATABASE_PASSWORD}
+    ports:
+      - ${DATABASE_PORT}:3306
+    restart: unless-stopped
+
+  performance-review-api:
+    build: .
+    ports:
+      - 8000:8000
+    depends_on:
+      - mysql
+    env_file:
+      - .env # Remove this on production
+    restart: unless-stopped

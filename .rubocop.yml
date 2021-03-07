@@ -1,0 +1,54 @@
+---
+require:
+  - rubocop-performance
+  - rubocop-rspec
+
+AllCops:
+  NewCops: enable
+  TargetRubyVersion: 2.7.2
+  Exclude:
+    - db/**/*.rb
+
+# Layout
+Layout/HashAlignment:
+  EnforcedColonStyle: table
+  EnforcedHashRocketStyle: table
+Layout/FirstHashElementIndentation:
+  EnforcedStyle: consistent
+Layout/LineLength:
+  Enabled: false
+
+# Metrics
+Metrics/CyclomaticComplexity:
+  Max: 15
+Metrics/PerceivedComplexity:
+  Max: 15
+Metrics/AbcSize:
+  Max: 45
+Metrics/BlockLength:
+  Enabled: false
+Metrics/ClassLength:
+  Enabled: false
+Metrics/MethodLength:
+  Enabled: false
+Metrics/ModuleLength:
+  Enabled: false
+
+# Style
+Style/Documentation:
+  Enabled: false
+Style/RegexpLiteral:
+  Enabled: true
+  EnforcedStyle: slashes
+Style/RaiseArgs:
+  Enabled: false
+
+# RSpec
+RSpec/NamedSubject:
+  Enabled: false
+RSpec/MultipleExpectations:
+  Enabled: false
+RSpec/MultipleMemoizedHelpers:
+  Enabled: false
+RSpec/ScatteredSetup:
+  Enabled: false

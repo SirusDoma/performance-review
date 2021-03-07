@@ -1,0 +1,921 @@
+FORMAT: 1A
+# Performance Review API
+API Documentation for Performance Review App.  
+This application enable adminstrator to assign employees to review each other.
+
+
+# Group Authentication
+Provide authentication functions for employees or admin
+
+## Authenticate User [/authenticate]
+Authenticate given email and password
+
+### Authenticate User [POST]
+
+
++ Request success (application/json)
+
+    + Headers
+
+            Accept: application/json
+            Host: example.org
+
+    + Body
+
+            {
+              "email": "kerluke.petrina@company.com",
+              "password": "sup3r_s3cr3t_p4ssword"
+            }
+
++ Response 200 (application/json)
+
+    + Headers
+
+            Content-Length: 409
+            X-Content-Type-Options: nosniff
+
+    + Body
+
+            {
+              "data": {
+                "id": 1001,
+                "full_name": "Petrina Kerluke",
+                "email": "kerluke.petrina@company.com",
+                "gender": "male",
+                "department": "Community-Services",
+                "phone_number": "799-939-3221 x1312",
+                "address": "Apt. 420 5667 Petronila Port, Wolffville, WI 11527-6104",
+                "is_admin": false,
+                "created_at": "2021-03-06T18:32:44.901Z",
+                "updated_at": "2021-03-06T18:32:44.901Z",
+                "exp": "2021-03-08T01:32:44.901+07:00"
+              },
+              "meta": {
+                "token": "123abcfoobar"
+              }
+            }
+
++ Request unauthorized (application/json)
+
+    + Headers
+
+            Accept: application/json
+            Host: example.org
+
+    + Body
+
+            {
+              "email": "zulauf_damon@company.com",
+              "password": "sup3r_s3cr3t_p4ssword"
+            }
+
++ Response 401 (application/json)
+
+    + Headers
+
+            Content-Length: 26
+            X-Content-Type-Options: nosniff
+
+    + Body
+
+            {
+              "message": "Unauthorized"
+            }
+
+## Change password [/change-password]
+Change password of authenticated user with given `new_password`
+
+### Change password [PATCH]
+
+
++ Request success (application/json)
+
+    + Headers
+
+            Accept: application/json
+            Authorization: Bearer 123_sup3r_s3cr3t_t0k3n
+            Host: example.org
+
+    + Body
+
+            {
+              "password": "sup3r_s3cr3t_p4ssword",
+              "new_password": "4n0th3r_s3cr3t"
+            }
+
++ Response 200 (application/json)
+
+    + Headers
+
+            Content-Length: 393
+            X-Content-Type-Options: nosniff
+
+    + Body
+
+            {
+              "data": {
+                "id": 1003,
+                "full_name": "Arron McClure",
+                "email": "mcclure_arron@company.com",
+                "gender": "female",
+                "department": "IT",
+                "phone_number": "527.441.1712 x4881",
+                "address": "Suite 581 80069 Agustin Lights, West Denyseland, KY 60238",
+                "is_admin": false,
+                "created_at": "2021-03-06T18:32:45.261Z",
+                "updated_at": "2021-03-06T18:32:45.261Z",
+                "exp": "2021-03-08T01:32:45.262+07:00"
+              },
+              "meta": {
+                "token": "123abcfoobar"
+              }
+            }
+
++ Request unauthorized (application/json)
+
+    + Headers
+
+            Accept: application/json
+            Authorization: Bearer 123_sup3r_s3cr3t_t0k3n
+            Host: example.org
+
+    + Body
+
+            {
+              "password": "sup3r_s3cr3t_p4ssword",
+              "new_password": "4n0th3r_s3cr3t"
+            }
+
++ Response 401 (application/json)
+
+    + Headers
+
+            Content-Length: 26
+            X-Content-Type-Options: nosniff
+
+    + Body
+
+            {
+              "message": "Unauthorized"
+            }
+
+# Group Assignments
+Provide functions to manage `Assignment` resources.
+
+## Assignment Resource [/assignments]
+Provide functions to create and retrieve review assignments that assigned by an Administrator.
+
+### Create assignment [POST]
+Create a new assignment for specified employee as reviewer to review another employee
+
++ Request success (application/json)
+
+    + Headers
+
+            Accept: application/json
+            Authorization: Bearer 123_sup3r_s3cr3t_t0k3n
+            Host: example.org
+
+    + Body
+
+            {
+              "reviewer_id": 1006,
+              "reviewee_id": 1007
+            }
+
++ Response 200 (application/json)
+
+    + Headers
+
+            Content-Length: 337
+            X-Content-Type-Options: nosniff
+
+    + Body
+
+            {
+              "data": {
+                "id": 1008,
+                "created_at": "2021-03-06T18:32:45.939Z",
+                "updated_at": "2021-03-06T18:32:45.939Z",
+                "reviewer": {
+                  "id": 1006,
+                  "full_name": "Virgil Lang",
+                  "department": "Real-Estate"
+                },
+                "reviewee": {
+                  "id": 1007,
+                  "full_name": "Mrs. Alisha Hintz",
+                  "department": "Technology"
+                },
+                "creator": {
+                  "id": 1005,
+                  "full_name": "Dale Cummings",
+                  "department": "Administration"
+                }
+              }
+            }
+
++ Request reviewer not found (application/json)
+
+    + Headers
+
+            Accept: application/json
+            Authorization: Bearer 123_sup3r_s3cr3t_t0k3n
+            Host: example.org
+
+    + Body
+
+            {
+              "reviewer_id": 1010,
+              "reviewee_id": 1011
+            }
+
++ Response 404 (application/json)
+
+    + Headers
+
+            Content-Length: 38
+            X-Content-Type-Options: nosniff
+
+    + Body
+
+            {
+              "message": "Reviewer cannot be found"
+            }
+
++ Request reviewee not found (application/json)
+
+    + Headers
+
+            Accept: application/json
+            Authorization: Bearer 123_sup3r_s3cr3t_t0k3n
+            Host: example.org
+
+    + Body
+
+            {
+              "reviewer_id": 1014,
+              "reviewee_id": 1015
+            }
+
++ Response 404 (application/json)
+
+    + Headers
+
+            Content-Length: 38
+            X-Content-Type-Options: nosniff
+
+    + Body
+
+            {
+              "message": "Reviewee cannot be found"
+            }
+
+### Get assignments [GET]
+Get list of assigned review by admin.  
+It will return all assignments of every employee if authenticated user is an Administrator
+
+
++ Parameters
+  + offset (optional, integer) - The offset of nth record that will be fetched first
+      + Default: `0`
+  + limit (optional, integer) - The maximum number of data that will be returned
+      + Default: `10`
+
++ Request success (application/json)
+
+    + Headers
+
+            Accept: application/json
+            Authorization: Bearer 123_sup3r_s3cr3t_t0k3n
+            Host: example.org
+
++ Response 200 (application/json)
+
+    + Headers
+
+            Content-Length: 364
+            X-Content-Type-Options: nosniff
+
+    + Body
+
+            {
+              "data": [
+                {
+                  "id": 1020,
+                  "created_at": "2021-03-06T18:32:47.415Z",
+                  "updated_at": "2021-03-06T18:32:47.415Z",
+                  "reviewer": {
+                    "id": 1018,
+                    "full_name": "Eddy Parker",
+                    "department": "IT"
+                  },
+                  "reviewee": {
+                    "id": 1019,
+                    "full_name": "Kai Konopelski",
+                    "department": "Hospitality"
+                  },
+                  "creator": {
+                    "id": 1017,
+                    "full_name": "Lina Kassulke",
+                    "department": "Marketing"
+                  }
+                }
+              ],
+              "meta": {
+                "offset": 0,
+                "limit": 10,
+                "total": 1
+              }
+            }
+
+# Group Employees
+Provide functions to manage `Employee` resources.
+
+## Employee Resource [/employees]
+Provide functions to create and retrieve employee information.
+
+### Create employee [POST]
+Register a new employe
+
++ Request success (application/json)
+
+    + Headers
+
+            Accept: application/json
+            Authorization: Bearer 123_sup3r_s3cr3t_t0k3n
+            Host: example.org
+
+    + Body
+
+            {
+            }
+
++ Response 200 (application/json)
+
+    + Headers
+
+            Content-Length: 378
+            X-Content-Type-Options: nosniff
+
+    + Body
+
+            {
+              "data": {
+                "id": 1022,
+                "full_name": "Gaston Kuphal V",
+                "email": "gaston.v.kuphal@company.com",
+                "gender": "female",
+                "department": "Community-Services",
+                "phone_number": "418.082.5095 x94817",
+                "address": "199 Michael Haven, North Aprilbury, VT 57731-8576",
+                "is_admin": false,
+                "created_at": "2021-03-06T18:32:47.736Z",
+                "updated_at": "2021-03-06T18:32:47.736Z"
+              },
+              "meta": {
+                "password": "123_s3cr3t_p4ssw0rd"
+              }
+            }
+
++ Request bad request (application/json)
+
+    + Headers
+
+            Accept: application/json
+            Authorization: Bearer 123_sup3r_s3cr3t_t0k3n
+            Host: example.org
+
+    + Body
+
+            {
+            }
+
++ Response 400 (application/json)
+
+    + Headers
+
+            Content-Length: 328
+            X-Content-Type-Options: nosniff
+
+    + Body
+
+            {
+              "message": "Validation failed: Full name can't be blank, Department can't be blank, Phone number can't be blank, Address can't be blank, Email can't be blank",
+              "errors": {
+                "full_name": [
+                  {
+                    "error": "blank"
+                  }
+                ],
+                "department": [
+                  {
+                    "error": "blank"
+                  }
+                ],
+                "phone_number": [
+                  {
+                    "error": "blank"
+                  }
+                ],
+                "address": [
+                  {
+                    "error": "blank"
+                  }
+                ],
+                "email": [
+                  {
+                    "error": "blank"
+                  }
+                ]
+              }
+            }
+
+### Get employees [GET]
+Get list of employees
+
++ Parameters
+  + offset (optional, integer) - The offset of nth record that will be fetched first
+      + Default: `0`
+  + limit (optional, integer) - The maximum number of data that will be returned
+      + Default: `10`
+
++ Request success (application/json)
+
+    + Headers
+
+            Accept: application/json
+            Authorization: Bearer 123_sup3r_s3cr3t_t0k3n
+            Host: example.org
+
++ Response 200 (application/json)
+
+    + Headers
+
+            Content-Length: 363
+            X-Content-Type-Options: nosniff
+
+    + Body
+
+            {
+              "data": [
+                {
+                  "id": 1025,
+                  "full_name": "Irene Jacobs",
+                  "email": "jacobs.irene@company.com",
+                  "gender": "female",
+                  "department": "Education",
+                  "phone_number": "(725) 061-3795 x5389",
+                  "address": "5168 Floria Groves, New Chington, IN 87205-3193",
+                  "is_admin": false,
+                  "created_at": "2021-03-06T18:32:48.378Z",
+                  "updated_at": "2021-03-06T18:32:48.378Z"
+                }
+              ],
+              "meta": {
+                "offset": 0,
+                "limit": 10,
+                "total": 1
+              }
+            }
+
+## Employee Detail [/employees/{employee_id}]
+Provide functions to manipulate employee information.
+
+### Update employee [PATCH]
+Update a employee that match with given id
+
++ Parameters
+  + employee_id (required, integer) - The id of employee that will be modified
+
++ Request success (application/json)
+
+    + Headers
+
+            Accept: application/json
+            Authorization: Bearer 123_sup3r_s3cr3t_t0k3n
+            Host: example.org
+
+    + Body
+
+            {
+            }
+
++ Response 200 (application/json)
+
+    + Headers
+
+            Content-Length: 325
+            X-Content-Type-Options: nosniff
+
+    + Body
+
+            {
+              "data": {
+                "id": 1027,
+                "full_name": "Genesis McCullough",
+                "email": "genesis_mccullough@company.com",
+                "gender": "male",
+                "department": "Education",
+                "phone_number": "594-195-7868 x82069",
+                "address": "968 Angelo Loop, West Alphonseton, SD 47902",
+                "is_admin": false,
+                "created_at": "2021-03-06T18:32:48.698Z",
+                "updated_at": "2021-03-06T18:32:48.698Z"
+              }
+            }
+
+# Group Questions
+Provide functions to manage `Question` resources.
+
+## Question Resource [/questions]
+Provide functions to create and retrieve feedback questions that need to be answered by employees.
+
+### Create question [POST]
+Create a new feedback question with given description
+
++ Request success (application/json)
+
+    + Headers
+
+            Accept: application/json
+            Authorization: Bearer 123_sup3r_s3cr3t_t0k3n
+            Host: example.org
+
+    + Body
+
+            {
+              "description": "What did this person do well?"
+            }
+
++ Response 200 (application/json)
+
+    + Headers
+
+            Content-Length: 164
+            X-Content-Type-Options: nosniff
+
+    + Body
+
+            {
+              "data": {
+                "id": 1029,
+                "description": "What did this person do well?",
+                "created_at": "2021-03-06T18:32:48.871Z",
+                "updated_at": "2021-03-06T18:32:48.871Z",
+                "deleted_at": null
+              }
+            }
+
++ Request bad request (application/json)
+
+    + Headers
+
+            Accept: application/json
+            Authorization: Bearer 123_sup3r_s3cr3t_t0k3n
+            Host: example.org
+
+    + Body
+
+            {
+              "description": null
+            }
+
++ Response 400 (application/json)
+
+    + Headers
+
+            Content-Length: 104
+            X-Content-Type-Options: nosniff
+
+    + Body
+
+            {
+              "message": "Validation failed: Description can't be blank",
+              "errors": {
+                "description": [
+                  {
+                    "error": "blank"
+                  }
+                ]
+              }
+            }
+
+### Get questions [GET]
+Get list of questions
+
++ Parameters
+  + offset (optional, integer) - The offset of nth record that will be fetched first
+      + Default: `0`
+  + limit (optional, integer) - The maximum number of data that will be returned
+      + Default: `10`
+
++ Request success (application/json)
+
+    + Headers
+
+            Accept: application/json
+            Authorization: Bearer 123_sup3r_s3cr3t_t0k3n
+            Host: example.org
+
++ Response 200 (application/json)
+
+    + Headers
+
+            Content-Length: 207
+            X-Content-Type-Options: nosniff
+
+    + Body
+
+            {
+              "data": [
+                {
+                  "id": 1032,
+                  "description": "What did this person do well?",
+                  "created_at": "2021-03-06T18:32:49.212Z",
+                  "updated_at": "2021-03-06T18:32:49.212Z",
+                  "deleted_at": null
+                }
+              ],
+              "meta": {
+                "offset": 0,
+                "limit": 10,
+                "total": 1
+              }
+            }
+
+## Question Detail [/questions/{question_id}]
+Provide functions to manipulate feedback questions that need to be answered by assigned employees.
+
+### Update question [PATCH]
+Update a question that match with given id
+
++ Parameters
+  + question_id (required, integer) - The id of question that will be modified
+
++ Request success (application/json)
+
+    + Headers
+
+            Accept: application/json
+            Authorization: Bearer 123_sup3r_s3cr3t_t0k3n
+            Host: example.org
+
+    + Body
+
+            {
+              "description": "What did this person do well?"
+            }
+
++ Response 200 (application/json)
+
+    + Headers
+
+            Content-Length: 164
+            X-Content-Type-Options: nosniff
+
+    + Body
+
+            {
+              "data": {
+                "id": 1034,
+                "description": "What did this person do well?",
+                "created_at": "2021-03-06T18:32:49.385Z",
+                "updated_at": "2021-03-06T18:32:49.385Z",
+                "deleted_at": null
+              }
+            }
+
+### Delete question [DELETE]
+Delete a question that match with given id
+
++ Parameters
+  + question_id (required, integer) - The id of question that will be deleted
+
++ Request success (application/json)
+
+    + Headers
+
+            Accept: application/json
+            Authorization: Bearer 123_sup3r_s3cr3t_t0k3n
+            Host: example.org
+
+    + Body
+
+            {
+            }
+
++ Response 200 (application/json)
+
+    + Headers
+
+            Content-Length: 164
+            X-Content-Type-Options: nosniff
+
+    + Body
+
+            {
+              "data": {
+                "id": 1036,
+                "description": "What did this person do well?",
+                "created_at": "2021-03-06T18:32:49.556Z",
+                "updated_at": "2021-03-06T18:32:49.556Z",
+                "deleted_at": null
+              }
+            }
+
+# Group Reviews
+Provide functions to manage `Review` resources.
+
+## Review Resource [/assignments/{assignment_id}/reviews]
+Provide functions to post and retrieve feedback reviews that employees submitted.
+
+### Create reviews [POST]
+Post new review feedbacks for given set of questions
+
++ Parameters
+  + assignment_id (required, integer) - The id of assignment that will be done
+
++ Request success (application/json)
+
+    + Headers
+
+            Accept: application/json
+            Authorization: Bearer 123_sup3r_s3cr3t_t0k3n
+            Host: example.org
+
+    + Body
+
+            {
+              "answers": [
+                {
+                  "question_id": 1,
+                  "answer": "Quo illum ducimus. Dolorem aut esse. Perspiciatis non quisquam.Est dolores voluptas. Possimus fugit quod. Quibusdam nulla modi."
+                },
+                {
+                  "question_id": 2,
+                  "answer": "Illum temporibus nesciunt. Nisi autem qui. Et occaecati vero.Rerum voluptate voluptatem. Magni ducimus explicabo. Nisi voluptas ullam."
+                }
+              ]
+            }
+
++ Response 200 (application/json)
+
+    + Headers
+
+            Content-Length: 699
+            X-Content-Type-Options: nosniff
+
+    + Body
+
+            {
+              "data": [
+                {
+                  "id": 1042,
+                  "assignment_id": null,
+                  "answer": "Quo illum ducimus. Dolorem aut esse. Perspiciatis non quisquam.Est dolores voluptas. Possimus fugit quod. Quibusdam nulla modi.",
+                  "created_at": "2021-03-06T18:32:50.239Z",
+                  "updated_at": "2021-03-06T18:32:50.239Z",
+                  "question": {
+                    "id": 1041,
+                    "description": "What did this person do well?"
+                  }
+                },
+                {
+                  "id": 1044,
+                  "assignment_id": null,
+                  "answer": "Illum temporibus nesciunt. Nisi autem qui. Et occaecati vero.Rerum voluptate voluptatem. Magni ducimus explicabo. Nisi voluptas ullam.",
+                  "created_at": "2021-03-06T18:32:50.242Z",
+                  "updated_at": "2021-03-06T18:32:50.242Z",
+                  "question": {
+                    "id": 1043,
+                    "description": "What did this person do well?"
+                  }
+                }
+              ],
+              "meta": {
+                "offset": 0,
+                "limit": 2,
+                "total": 2
+              }
+            }
+
++ Request bad request (application/json)
+
+    + Headers
+
+            Accept: application/json
+            Authorization: Bearer 123_sup3r_s3cr3t_t0k3n
+            Host: example.org
+
+    + Body
+
+            {
+              "answers": [
+                {
+                  "question_id": 1,
+                  "answer": "Quos occaecati cumque. Minima voluptatum esse. Vero et ipsum.Ex deleniti voluptatibus. Nobis labore quo. Sint voluptas alias."
+                },
+                {
+                  "foo": "bar",
+                  "fizz": "buzz"
+                }
+              ]
+            }
+
++ Response 400 (application/json)
+
+    + Headers
+
+            Content-Length: 215
+            X-Content-Type-Options: nosniff
+
+    + Body
+
+            {
+              "message": "Validation failed: Answers is invalid",
+              "errors": {
+                "answers": [
+                  {
+                    "error": "invalid",
+                    "details": [
+                      [
+            
+                      ],
+                      [
+                        {
+                          "question_id": {
+                            "error": "blank"
+                          }
+                        },
+                        {
+                          "question_id": {
+                            "error": "not_a_number"
+                          }
+                        },
+                        {
+                          "answer": {
+                            "error": "blank"
+                          }
+                        }
+                      ]
+                    ]
+                  }
+                ]
+              }
+            }
+
+### Get reviews [GET]
+Get list of submitted review.  
+Administrator will be able to see reviews that submitted by any employees.
+
+
++ Parameters
+  + offset (optional, integer) - The offset of nth record that will be fetched first
+      + Default: `0`
+  + limit (optional, integer) - The maximum number of data that will be returned
+      + Default: `10`
+
++ Request success (application/json)
+
+    + Headers
+
+            Accept: application/json
+            Authorization: Bearer 123_sup3r_s3cr3t_t0k3n
+            Host: example.org
+
++ Response 200 (application/json)
+
+    + Headers
+
+            Content-Length: 642
+            X-Content-Type-Options: nosniff
+
+    + Body
+
+            {
+              "data": [
+                {
+                  "id": 1060,
+                  "assignment_id": null,
+                  "answer": "Hic minima quae. Architecto error sit. Optio amet aliquid.Nemo sint ratione. Quam earum qui. Saepe praesentium et.",
+                  "created_at": "2021-03-06T18:32:51.591Z",
+                  "updated_at": "2021-03-06T18:32:51.591Z",
+                  "question": {
+                    "id": 1059,
+                    "description": "What did this person do well?"
+                  }
+                },
+                {
+                  "id": 1062,
+                  "assignment_id": null,
+                  "answer": "Alias molestiae quasi. Asperiores ut vitae. Itaque perspiciatis et.Ipsa corporis itaque. Quo illum quibusdam. Eaque impedit ipsum.",
+                  "created_at": "2021-03-06T18:32:51.592Z",
+                  "updated_at": "2021-03-06T18:32:51.592Z",
+                  "question": {
+                    "id": 1061,
+                    "description": "What did this person do well?"
+                  }
+                }
+              ]
+            }

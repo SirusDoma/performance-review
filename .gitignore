@@ -1,0 +1,5 @@
+.env
+.tool-versions
+.idea
+
+node_modules
