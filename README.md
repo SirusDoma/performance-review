@@ -24,7 +24,7 @@ Note that you can use `db:create` and `db:migrate` if you do not wish to seed th
 1. Copy `.env.sample` to `.env` and configure application setting
 2. Install required gem with bundler, use `gem install bundler` if bundler is not installed then proceed with `bundle install`
 3. Run `bundle exec rake db:setup` to run database migrations
-4. Run `bundle exec -C config/puma.rb config.ru`
+4. Run `bundle exec puma -C config/puma.rb config.ru`
 5. Press CTRL+C to stop the application
 
 ### Docker
