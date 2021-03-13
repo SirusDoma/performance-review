@@ -11,7 +11,6 @@ RSpec.describe EmployeeController, type: :controller do
   resource 'Employees' do
     explanation I18n.t('documentation.employees.explanation')
 
-    let(:params) { EmployeeForm.new(employee).attributes }
     let(:expected_response) do
       {
         data: employee.serializable_hash
@@ -29,6 +28,8 @@ RSpec.describe EmployeeController, type: :controller do
           allow(EmployeeService).to receive(:register).and_return([employee, password])
         end
 
+        let(:params) { EmployeeForm.new(employee.attributes.except('id')).attributes }
+
         example 'success' do
           expect(subject.response_status).to eq(200)
           expect(subject.response_body).to include_json(expected_response)
@@ -39,7 +40,6 @@ RSpec.describe EmployeeController, type: :controller do
         include_context 'with authenticated_user'
 
         let(:params) { {} }
-
         example 'bad request' do
           expect(subject.response_status).to eq(400)
         end
@@ -87,6 +87,8 @@ RSpec.describe EmployeeController, type: :controller do
         before do
           allow(EmployeeService).to receive(:update).and_return(employee)
         end
+
+        let(:params) { EmployeeForm.new(employee.attributes.except('id')).attributes }
 
         example 'success' do
           expect(subject.response_status).to eq(200)
