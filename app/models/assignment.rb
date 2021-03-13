@@ -16,7 +16,6 @@ class Assignment < ApplicationRecord
   def serializable_hash(options = nil)
     options ||= {}
     if options.delete(:strict).blank?
-      options[:except]  = (options[:except] || []) + %i[reviewer_id reviewee_id creator_id]
       options[:include] = (options[:include] || {}).merge({
         reviewer: { only: %i[id full_name department] },
         reviewee: { only: %i[id full_name department] },

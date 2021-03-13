@@ -11,7 +11,6 @@ class Review < ApplicationRecord
   def serializable_hash(options = nil)
     options ||= {}
     if options.blank?
-      options[:except]  = %i[question_id]
       options[:include] = {
         question: { only: %i[id description] }
       }
