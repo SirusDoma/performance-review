@@ -3,27 +3,27 @@ This application enable adminstrator to assign employees to review each other.</
 <section id="authentication" class="resource-group"><h2 class="group-heading">Authentication <a href="#authentication" class="permalink">&para;</a></h2><p>Provide authentication functions for employees or admin</p>
 <div id="authentication-authenticate-user" class="resource"><h3 class="resource-heading">Authenticate User <a href="#authentication-authenticate-user" class="permalink">&nbsp;&para;</a></h3><p>Authenticate given email and password</p>
 <div id="authentication-authenticate-user-post" class="action post"><h4 class="action-heading"><div class="name">Authenticate User</div><a href="#authentication-authenticate-user-post" class="method post">POST</a><code class="uri">/authenticate</code></h4><h4>Example URI</h4><div class="definition"><span class="method post">POST</span>&nbsp;<span class="uri"><span class="hostname"></span>/authenticate</span></div><div class="title"><strong>Request&nbsp;&nbsp;<code>success</code></strong><div class="collapse-button"><span class="close">Hide</span><span class="open">Show</span></div></div><div class="collapse-content"><div class="inner"><h5>Headers</h5><pre><code><span class="hljs-attribute">Content-Type</span>: <span class="hljs-string">application/json</span><br><span class="hljs-attribute">Accept</span>: <span class="hljs-string">application/json</span><br><span class="hljs-attribute">Host</span>: <span class="hljs-string">example.org</span></code></pre><div style="height: 1px;"></div><h5>Body</h5><pre><code>{
-  "<span class="hljs-attribute">email</span>": <span class="hljs-value"><span class="hljs-string">"kerluke.petrina@company.com"</span></span>,
+  "<span class="hljs-attribute">email</span>": <span class="hljs-value"><span class="hljs-string">"rev.leslie.mosciski@company.com"</span></span>,
   "<span class="hljs-attribute">password</span>": <span class="hljs-value"><span class="hljs-string">"sup3r_s3cr3t_p4ssword"</span>
-</span>}</code></pre><div style="height: 1px;"></div></div></div><div class="title"><strong>Response&nbsp;&nbsp;<code>200</code></strong><div class="collapse-button"><span class="close">Hide</span><span class="open">Show</span></div></div><div class="collapse-content"><div class="inner"><h5>Headers</h5><pre><code><span class="hljs-attribute">Content-Type</span>: <span class="hljs-string">application/json</span><br><span class="hljs-attribute">Content-Length</span>: <span class="hljs-string">409</span><br><span class="hljs-attribute">X-Content-Type-Options</span>: <span class="hljs-string">nosniff</span></code></pre><div style="height: 1px;"></div><h5>Body</h5><pre><code>{
+</span>}</code></pre><div style="height: 1px;"></div></div></div><div class="title"><strong>Response&nbsp;&nbsp;<code>200</code></strong><div class="collapse-button"><span class="close">Hide</span><span class="open">Show</span></div></div><div class="collapse-content"><div class="inner"><h5>Headers</h5><pre><code><span class="hljs-attribute">Content-Type</span>: <span class="hljs-string">application/json</span><br><span class="hljs-attribute">Content-Length</span>: <span class="hljs-string">400</span><br><span class="hljs-attribute">X-Content-Type-Options</span>: <span class="hljs-string">nosniff</span></code></pre><div style="height: 1px;"></div><h5>Body</h5><pre><code>{
   "<span class="hljs-attribute">data</span>": <span class="hljs-value">{
     "<span class="hljs-attribute">id</span>": <span class="hljs-value"><span class="hljs-number">1001</span></span>,
-    "<span class="hljs-attribute">full_name</span>": <span class="hljs-value"><span class="hljs-string">"Petrina Kerluke"</span></span>,
-    "<span class="hljs-attribute">email</span>": <span class="hljs-value"><span class="hljs-string">"kerluke.petrina@company.com"</span></span>,
+    "<span class="hljs-attribute">full_name</span>": <span class="hljs-value"><span class="hljs-string">"Rev. Leslie Mosciski"</span></span>,
+    "<span class="hljs-attribute">email</span>": <span class="hljs-value"><span class="hljs-string">"rev.leslie.mosciski@company.com"</span></span>,
     "<span class="hljs-attribute">gender</span>": <span class="hljs-value"><span class="hljs-string">"male"</span></span>,
-    "<span class="hljs-attribute">department</span>": <span class="hljs-value"><span class="hljs-string">"Community-Services"</span></span>,
-    "<span class="hljs-attribute">phone_number</span>": <span class="hljs-value"><span class="hljs-string">"799-939-3221 x1312"</span></span>,
-    "<span class="hljs-attribute">address</span>": <span class="hljs-value"><span class="hljs-string">"Apt. 420 5667 Petronila Port, Wolffville, WI 11527-6104"</span></span>,
+    "<span class="hljs-attribute">department</span>": <span class="hljs-value"><span class="hljs-string">"Sales"</span></span>,
+    "<span class="hljs-attribute">phone_number</span>": <span class="hljs-value"><span class="hljs-string">"1-731-789-3811 x148"</span></span>,
+    "<span class="hljs-attribute">address</span>": <span class="hljs-value"><span class="hljs-string">"Suite 192 69016 Marla Haven, North Leda, OK 10388"</span></span>,
     "<span class="hljs-attribute">is_admin</span>": <span class="hljs-value"><span class="hljs-literal">false</span></span>,
-    "<span class="hljs-attribute">created_at</span>": <span class="hljs-value"><span class="hljs-string">"2021-03-06T18:32:44.901Z"</span></span>,
-    "<span class="hljs-attribute">updated_at</span>": <span class="hljs-value"><span class="hljs-string">"2021-03-06T18:32:44.901Z"</span></span>,
-    "<span class="hljs-attribute">exp</span>": <span class="hljs-value"><span class="hljs-string">"2021-03-08T01:32:44.901+07:00"</span>
+    "<span class="hljs-attribute">created_at</span>": <span class="hljs-value"><span class="hljs-string">"2021-03-13T08:53:16.815Z"</span></span>,
+    "<span class="hljs-attribute">updated_at</span>": <span class="hljs-value"><span class="hljs-string">"2021-03-13T08:53:16.815Z"</span></span>,
+    "<span class="hljs-attribute">exp</span>": <span class="hljs-value"><span class="hljs-string">"2021-03-14T15:53:16.815+07:00"</span>
   </span>}</span>,
   "<span class="hljs-attribute">meta</span>": <span class="hljs-value">{
     "<span class="hljs-attribute">token</span>": <span class="hljs-value"><span class="hljs-string">"123abcfoobar"</span>
   </span>}
 </span>}</code></pre><div style="height: 1px;"></div></div></div><div class="title"><strong>Request&nbsp;&nbsp;<code>unauthorized</code></strong><div class="collapse-button"><span class="close">Hide</span><span class="open">Show</span></div></div><div class="collapse-content"><div class="inner"><h5>Headers</h5><pre><code><span class="hljs-attribute">Content-Type</span>: <span class="hljs-string">application/json</span><br><span class="hljs-attribute">Accept</span>: <span class="hljs-string">application/json</span><br><span class="hljs-attribute">Host</span>: <span class="hljs-string">example.org</span></code></pre><div style="height: 1px;"></div><h5>Body</h5><pre><code>{
-  "<span class="hljs-attribute">email</span>": <span class="hljs-value"><span class="hljs-string">"zulauf_damon@company.com"</span></span>,
+  "<span class="hljs-attribute">email</span>": <span class="hljs-value"><span class="hljs-string">"exie_weissnat@company.com"</span></span>,
   "<span class="hljs-attribute">password</span>": <span class="hljs-value"><span class="hljs-string">"sup3r_s3cr3t_p4ssword"</span>
 </span>}</code></pre><div style="height: 1px;"></div></div></div><div class="title"><strong>Response&nbsp;&nbsp;<code>401</code></strong><div class="collapse-button"><span class="close">Hide</span><span class="open">Show</span></div></div><div class="collapse-content"><div class="inner"><h5>Headers</h5><pre><code><span class="hljs-attribute">Content-Type</span>: <span class="hljs-string">application/json</span><br><span class="hljs-attribute">Content-Length</span>: <span class="hljs-string">26</span><br><span class="hljs-attribute">X-Content-Type-Options</span>: <span class="hljs-string">nosniff</span></code></pre><div style="height: 1px;"></div><h5>Body</h5><pre><code>{
   "<span class="hljs-attribute">message</span>": <span class="hljs-value"><span class="hljs-string">"Unauthorized"</span>
@@ -31,19 +31,19 @@ This application enable adminstrator to assign employees to review each other.</
 <div id="authentication-change-password-patch" class="action patch"><h4 class="action-heading"><div class="name">Change password</div><a href="#authentication-change-password-patch" class="method patch">PATCH</a><code class="uri">/change-password</code></h4><h4>Example URI</h4><div class="definition"><span class="method patch">PATCH</span>&nbsp;<span class="uri"><span class="hostname"></span>/change-password</span></div><div class="title"><strong>Request&nbsp;&nbsp;<code>success</code></strong><div class="collapse-button"><span class="close">Hide</span><span class="open">Show</span></div></div><div class="collapse-content"><div class="inner"><h5>Headers</h5><pre><code><span class="hljs-attribute">Content-Type</span>: <span class="hljs-string">application/json</span><br><span class="hljs-attribute">Accept</span>: <span class="hljs-string">application/json</span><br><span class="hljs-attribute">Authorization</span>: <span class="hljs-string">Bearer 123_sup3r_s3cr3t_t0k3n</span><br><span class="hljs-attribute">Host</span>: <span class="hljs-string">example.org</span></code></pre><div style="height: 1px;"></div><h5>Body</h5><pre><code>{
   "<span class="hljs-attribute">password</span>": <span class="hljs-value"><span class="hljs-string">"sup3r_s3cr3t_p4ssword"</span></span>,
   "<span class="hljs-attribute">new_password</span>": <span class="hljs-value"><span class="hljs-string">"4n0th3r_s3cr3t"</span>
-</span>}</code></pre><div style="height: 1px;"></div></div></div><div class="title"><strong>Response&nbsp;&nbsp;<code>200</code></strong><div class="collapse-button"><span class="close">Hide</span><span class="open">Show</span></div></div><div class="collapse-content"><div class="inner"><h5>Headers</h5><pre><code><span class="hljs-attribute">Content-Type</span>: <span class="hljs-string">application/json</span><br><span class="hljs-attribute">Content-Length</span>: <span class="hljs-string">393</span><br><span class="hljs-attribute">X-Content-Type-Options</span>: <span class="hljs-string">nosniff</span></code></pre><div style="height: 1px;"></div><h5>Body</h5><pre><code>{
+</span>}</code></pre><div style="height: 1px;"></div></div></div><div class="title"><strong>Response&nbsp;&nbsp;<code>200</code></strong><div class="collapse-button"><span class="close">Hide</span><span class="open">Show</span></div></div><div class="collapse-content"><div class="inner"><h5>Headers</h5><pre><code><span class="hljs-attribute">Content-Type</span>: <span class="hljs-string">application/json</span><br><span class="hljs-attribute">Content-Length</span>: <span class="hljs-string">383</span><br><span class="hljs-attribute">X-Content-Type-Options</span>: <span class="hljs-string">nosniff</span></code></pre><div style="height: 1px;"></div><h5>Body</h5><pre><code>{
   "<span class="hljs-attribute">data</span>": <span class="hljs-value">{
     "<span class="hljs-attribute">id</span>": <span class="hljs-value"><span class="hljs-number">1003</span></span>,
-    "<span class="hljs-attribute">full_name</span>": <span class="hljs-value"><span class="hljs-string">"Arron McClure"</span></span>,
-    "<span class="hljs-attribute">email</span>": <span class="hljs-value"><span class="hljs-string">"mcclure_arron@company.com"</span></span>,
-    "<span class="hljs-attribute">gender</span>": <span class="hljs-value"><span class="hljs-string">"female"</span></span>,
-    "<span class="hljs-attribute">department</span>": <span class="hljs-value"><span class="hljs-string">"IT"</span></span>,
-    "<span class="hljs-attribute">phone_number</span>": <span class="hljs-value"><span class="hljs-string">"527.441.1712 x4881"</span></span>,
-    "<span class="hljs-attribute">address</span>": <span class="hljs-value"><span class="hljs-string">"Suite 581 80069 Agustin Lights, West Denyseland, KY 60238"</span></span>,
+    "<span class="hljs-attribute">full_name</span>": <span class="hljs-value"><span class="hljs-string">"Albert Schultz"</span></span>,
+    "<span class="hljs-attribute">email</span>": <span class="hljs-value"><span class="hljs-string">"schultz.albert@company.com"</span></span>,
+    "<span class="hljs-attribute">gender</span>": <span class="hljs-value"><span class="hljs-string">"male"</span></span>,
+    "<span class="hljs-attribute">department</span>": <span class="hljs-value"><span class="hljs-string">"Government"</span></span>,
+    "<span class="hljs-attribute">phone_number</span>": <span class="hljs-value"><span class="hljs-string">"921.675.5127"</span></span>,
+    "<span class="hljs-attribute">address</span>": <span class="hljs-value"><span class="hljs-string">"363 Walter Freeway, Lake Tonja, NM 76599-4892"</span></span>,
     "<span class="hljs-attribute">is_admin</span>": <span class="hljs-value"><span class="hljs-literal">false</span></span>,
-    "<span class="hljs-attribute">created_at</span>": <span class="hljs-value"><span class="hljs-string">"2021-03-06T18:32:45.261Z"</span></span>,
-    "<span class="hljs-attribute">updated_at</span>": <span class="hljs-value"><span class="hljs-string">"2021-03-06T18:32:45.261Z"</span></span>,
-    "<span class="hljs-attribute">exp</span>": <span class="hljs-value"><span class="hljs-string">"2021-03-08T01:32:45.262+07:00"</span>
+    "<span class="hljs-attribute">created_at</span>": <span class="hljs-value"><span class="hljs-string">"2021-03-13T08:53:17.155Z"</span></span>,
+    "<span class="hljs-attribute">updated_at</span>": <span class="hljs-value"><span class="hljs-string">"2021-03-13T08:53:17.155Z"</span></span>,
+    "<span class="hljs-attribute">exp</span>": <span class="hljs-value"><span class="hljs-string">"2021-03-14T15:53:17.155+07:00"</span>
   </span>}</span>,
   "<span class="hljs-attribute">meta</span>": <span class="hljs-value">{
     "<span class="hljs-attribute">token</span>": <span class="hljs-value"><span class="hljs-string">"123abcfoobar"</span>
@@ -59,25 +59,28 @@ This application enable adminstrator to assign employees to review each other.</
 <h4>Example URI</h4><div class="definition"><span class="method post">POST</span>&nbsp;<span class="uri"><span class="hostname"></span>/assignments</span></div><div class="title"><strong>Request&nbsp;&nbsp;<code>success</code></strong><div class="collapse-button"><span class="close">Hide</span><span class="open">Show</span></div></div><div class="collapse-content"><div class="inner"><h5>Headers</h5><pre><code><span class="hljs-attribute">Content-Type</span>: <span class="hljs-string">application/json</span><br><span class="hljs-attribute">Accept</span>: <span class="hljs-string">application/json</span><br><span class="hljs-attribute">Authorization</span>: <span class="hljs-string">Bearer 123_sup3r_s3cr3t_t0k3n</span><br><span class="hljs-attribute">Host</span>: <span class="hljs-string">example.org</span></code></pre><div style="height: 1px;"></div><h5>Body</h5><pre><code>{
   "<span class="hljs-attribute">reviewer_id</span>": <span class="hljs-value"><span class="hljs-number">1006</span></span>,
   "<span class="hljs-attribute">reviewee_id</span>": <span class="hljs-value"><span class="hljs-number">1007</span>
-</span>}</code></pre><div style="height: 1px;"></div></div></div><div class="title"><strong>Response&nbsp;&nbsp;<code>200</code></strong><div class="collapse-button"><span class="close">Hide</span><span class="open">Show</span></div></div><div class="collapse-content"><div class="inner"><h5>Headers</h5><pre><code><span class="hljs-attribute">Content-Type</span>: <span class="hljs-string">application/json</span><br><span class="hljs-attribute">Content-Length</span>: <span class="hljs-string">337</span><br><span class="hljs-attribute">X-Content-Type-Options</span>: <span class="hljs-string">nosniff</span></code></pre><div style="height: 1px;"></div><h5>Body</h5><pre><code>{
+</span>}</code></pre><div style="height: 1px;"></div></div></div><div class="title"><strong>Response&nbsp;&nbsp;<code>200</code></strong><div class="collapse-button"><span class="close">Hide</span><span class="open">Show</span></div></div><div class="collapse-content"><div class="inner"><h5>Headers</h5><pre><code><span class="hljs-attribute">Content-Type</span>: <span class="hljs-string">application/json</span><br><span class="hljs-attribute">Content-Length</span>: <span class="hljs-string">382</span><br><span class="hljs-attribute">X-Content-Type-Options</span>: <span class="hljs-string">nosniff</span></code></pre><div style="height: 1px;"></div><h5>Body</h5><pre><code>{
   "<span class="hljs-attribute">data</span>": <span class="hljs-value">{
     "<span class="hljs-attribute">id</span>": <span class="hljs-value"><span class="hljs-number">1008</span></span>,
-    "<span class="hljs-attribute">created_at</span>": <span class="hljs-value"><span class="hljs-string">"2021-03-06T18:32:45.939Z"</span></span>,
-    "<span class="hljs-attribute">updated_at</span>": <span class="hljs-value"><span class="hljs-string">"2021-03-06T18:32:45.939Z"</span></span>,
+    "<span class="hljs-attribute">reviewer_id</span>": <span class="hljs-value"><span class="hljs-number">1006</span></span>,
+    "<span class="hljs-attribute">reviewee_id</span>": <span class="hljs-value"><span class="hljs-number">1007</span></span>,
+    "<span class="hljs-attribute">creator_id</span>": <span class="hljs-value"><span class="hljs-number">1005</span></span>,
+    "<span class="hljs-attribute">created_at</span>": <span class="hljs-value"><span class="hljs-string">"2021-03-13T08:53:17.804Z"</span></span>,
+    "<span class="hljs-attribute">updated_at</span>": <span class="hljs-value"><span class="hljs-string">"2021-03-13T08:53:17.804Z"</span></span>,
     "<span class="hljs-attribute">reviewer</span>": <span class="hljs-value">{
       "<span class="hljs-attribute">id</span>": <span class="hljs-value"><span class="hljs-number">1006</span></span>,
-      "<span class="hljs-attribute">full_name</span>": <span class="hljs-value"><span class="hljs-string">"Virgil Lang"</span></span>,
-      "<span class="hljs-attribute">department</span>": <span class="hljs-value"><span class="hljs-string">"Real-Estate"</span>
+      "<span class="hljs-attribute">full_name</span>": <span class="hljs-value"><span class="hljs-string">"Rob Legros"</span></span>,
+      "<span class="hljs-attribute">department</span>": <span class="hljs-value"><span class="hljs-string">"Education"</span>
     </span>}</span>,
     "<span class="hljs-attribute">reviewee</span>": <span class="hljs-value">{
       "<span class="hljs-attribute">id</span>": <span class="hljs-value"><span class="hljs-number">1007</span></span>,
-      "<span class="hljs-attribute">full_name</span>": <span class="hljs-value"><span class="hljs-string">"Mrs. Alisha Hintz"</span></span>,
-      "<span class="hljs-attribute">department</span>": <span class="hljs-value"><span class="hljs-string">"Technology"</span>
+      "<span class="hljs-attribute">full_name</span>": <span class="hljs-value"><span class="hljs-string">"Gavin Lebsack"</span></span>,
+      "<span class="hljs-attribute">department</span>": <span class="hljs-value"><span class="hljs-string">"Mining"</span>
     </span>}</span>,
     "<span class="hljs-attribute">creator</span>": <span class="hljs-value">{
       "<span class="hljs-attribute">id</span>": <span class="hljs-value"><span class="hljs-number">1005</span></span>,
-      "<span class="hljs-attribute">full_name</span>": <span class="hljs-value"><span class="hljs-string">"Dale Cummings"</span></span>,
-      "<span class="hljs-attribute">department</span>": <span class="hljs-value"><span class="hljs-string">"Administration"</span>
+      "<span class="hljs-attribute">full_name</span>": <span class="hljs-value"><span class="hljs-string">"Mckenzie Runte II"</span></span>,
+      "<span class="hljs-attribute">department</span>": <span class="hljs-value"><span class="hljs-string">"Technology"</span>
     </span>}
   </span>}
 </span>}</code></pre><div style="height: 1px;"></div></div></div><div class="title"><strong>Request&nbsp;&nbsp;<code>reviewer not found</code></strong><div class="collapse-button"><span class="close">Hide</span><span class="open">Show</span></div></div><div class="collapse-content"><div class="inner"><h5>Headers</h5><pre><code><span class="hljs-attribute">Content-Type</span>: <span class="hljs-string">application/json</span><br><span class="hljs-attribute">Accept</span>: <span class="hljs-string">application/json</span><br><span class="hljs-attribute">Authorization</span>: <span class="hljs-string">Bearer 123_sup3r_s3cr3t_t0k3n</span><br><span class="hljs-attribute">Host</span>: <span class="hljs-string">example.org</span></code></pre><div style="height: 1px;"></div><h5>Body</h5><pre><code>{
@@ -94,26 +97,29 @@ This application enable adminstrator to assign employees to review each other.</
 It will return all assignments of every employee if authenticated user is an Administrator</p>
 <h4>Example URI</h4><div class="definition"><span class="method get">GET</span>&nbsp;<span class="uri"><span class="hostname"></span>/assignments</span></div><div class="title"><strong>URI Parameters</strong><div class="collapse-button show"><span class="close">Hide</span><span class="open">Show</span></div></div><div class="collapse-content"><dl class="inner"><dt>offset</dt><dd><code>integer</code>&nbsp;<span>(optional)</span>&nbsp;<span class="text-info default"><strong>Default:&nbsp;</strong><span>0</span></span>&nbsp;<p>The offset of nth record that will be fetched first</p>
 </dd><dt>limit</dt><dd><code>integer</code>&nbsp;<span>(optional)</span>&nbsp;<span class="text-info default"><strong>Default:&nbsp;</strong><span>10</span></span>&nbsp;<p>The maximum number of data that will be returned</p>
-</dd></dl></div><div class="title"><strong>Request&nbsp;&nbsp;<code>success</code></strong><div class="collapse-button"><span class="close">Hide</span><span class="open">Show</span></div></div><div class="collapse-content"><div class="inner"><h5>Headers</h5><pre><code><span class="hljs-attribute">Content-Type</span>: <span class="hljs-string">application/json</span><br><span class="hljs-attribute">Accept</span>: <span class="hljs-string">application/json</span><br><span class="hljs-attribute">Authorization</span>: <span class="hljs-string">Bearer 123_sup3r_s3cr3t_t0k3n</span><br><span class="hljs-attribute">Host</span>: <span class="hljs-string">example.org</span></code></pre><div style="height: 1px;"></div></div></div><div class="title"><strong>Response&nbsp;&nbsp;<code>200</code></strong><div class="collapse-button"><span class="close">Hide</span><span class="open">Show</span></div></div><div class="collapse-content"><div class="inner"><h5>Headers</h5><pre><code><span class="hljs-attribute">Content-Type</span>: <span class="hljs-string">application/json</span><br><span class="hljs-attribute">Content-Length</span>: <span class="hljs-string">364</span><br><span class="hljs-attribute">X-Content-Type-Options</span>: <span class="hljs-string">nosniff</span></code></pre><div style="height: 1px;"></div><h5>Body</h5><pre><code>{
+</dd></dl></div><div class="title"><strong>Request&nbsp;&nbsp;<code>success</code></strong><div class="collapse-button"><span class="close">Hide</span><span class="open">Show</span></div></div><div class="collapse-content"><div class="inner"><h5>Headers</h5><pre><code><span class="hljs-attribute">Content-Type</span>: <span class="hljs-string">application/json</span><br><span class="hljs-attribute">Accept</span>: <span class="hljs-string">application/json</span><br><span class="hljs-attribute">Authorization</span>: <span class="hljs-string">Bearer 123_sup3r_s3cr3t_t0k3n</span><br><span class="hljs-attribute">Host</span>: <span class="hljs-string">example.org</span></code></pre><div style="height: 1px;"></div></div></div><div class="title"><strong>Response&nbsp;&nbsp;<code>200</code></strong><div class="collapse-button"><span class="close">Hide</span><span class="open">Show</span></div></div><div class="collapse-content"><div class="inner"><h5>Headers</h5><pre><code><span class="hljs-attribute">Content-Type</span>: <span class="hljs-string">application/json</span><br><span class="hljs-attribute">Content-Length</span>: <span class="hljs-string">430</span><br><span class="hljs-attribute">X-Content-Type-Options</span>: <span class="hljs-string">nosniff</span></code></pre><div style="height: 1px;"></div><h5>Body</h5><pre><code>{
   "<span class="hljs-attribute">data</span>": <span class="hljs-value">[
     {
       "<span class="hljs-attribute">id</span>": <span class="hljs-value"><span class="hljs-number">1020</span></span>,
-      "<span class="hljs-attribute">created_at</span>": <span class="hljs-value"><span class="hljs-string">"2021-03-06T18:32:47.415Z"</span></span>,
-      "<span class="hljs-attribute">updated_at</span>": <span class="hljs-value"><span class="hljs-string">"2021-03-06T18:32:47.415Z"</span></span>,
+      "<span class="hljs-attribute">reviewer_id</span>": <span class="hljs-value"><span class="hljs-number">1018</span></span>,
+      "<span class="hljs-attribute">reviewee_id</span>": <span class="hljs-value"><span class="hljs-number">1019</span></span>,
+      "<span class="hljs-attribute">creator_id</span>": <span class="hljs-value"><span class="hljs-number">1017</span></span>,
+      "<span class="hljs-attribute">created_at</span>": <span class="hljs-value"><span class="hljs-string">"2021-03-13T08:53:19.242Z"</span></span>,
+      "<span class="hljs-attribute">updated_at</span>": <span class="hljs-value"><span class="hljs-string">"2021-03-13T08:53:19.242Z"</span></span>,
       "<span class="hljs-attribute">reviewer</span>": <span class="hljs-value">{
         "<span class="hljs-attribute">id</span>": <span class="hljs-value"><span class="hljs-number">1018</span></span>,
-        "<span class="hljs-attribute">full_name</span>": <span class="hljs-value"><span class="hljs-string">"Eddy Parker"</span></span>,
-        "<span class="hljs-attribute">department</span>": <span class="hljs-value"><span class="hljs-string">"IT"</span>
+        "<span class="hljs-attribute">full_name</span>": <span class="hljs-value"><span class="hljs-string">"Odilia Kozey"</span></span>,
+        "<span class="hljs-attribute">department</span>": <span class="hljs-value"><span class="hljs-string">"Farming"</span>
       </span>}</span>,
       "<span class="hljs-attribute">reviewee</span>": <span class="hljs-value">{
         "<span class="hljs-attribute">id</span>": <span class="hljs-value"><span class="hljs-number">1019</span></span>,
-        "<span class="hljs-attribute">full_name</span>": <span class="hljs-value"><span class="hljs-string">"Kai Konopelski"</span></span>,
-        "<span class="hljs-attribute">department</span>": <span class="hljs-value"><span class="hljs-string">"Hospitality"</span>
+        "<span class="hljs-attribute">full_name</span>": <span class="hljs-value"><span class="hljs-string">"Malissa Pacocha"</span></span>,
+        "<span class="hljs-attribute">department</span>": <span class="hljs-value"><span class="hljs-string">"Healthcare"</span>
       </span>}</span>,
       "<span class="hljs-attribute">creator</span>": <span class="hljs-value">{
         "<span class="hljs-attribute">id</span>": <span class="hljs-value"><span class="hljs-number">1017</span></span>,
-        "<span class="hljs-attribute">full_name</span>": <span class="hljs-value"><span class="hljs-string">"Lina Kassulke"</span></span>,
-        "<span class="hljs-attribute">department</span>": <span class="hljs-value"><span class="hljs-string">"Marketing"</span>
+        "<span class="hljs-attribute">full_name</span>": <span class="hljs-value"><span class="hljs-string">"Demetrius Mayert"</span></span>,
+        "<span class="hljs-attribute">department</span>": <span class="hljs-value"><span class="hljs-string">"Consulting"</span>
       </span>}
     </span>}
   ]</span>,
@@ -125,18 +131,25 @@ It will return all assignments of every employee if authenticated user is an Adm
 </span>}</code></pre><div style="height: 1px;"></div></div></div></div></div></section><section id="employees" class="resource-group"><h2 class="group-heading">Employees <a href="#employees" class="permalink">&para;</a></h2><p>Provide functions to manage <code>Employee</code> resources.</p>
 <div id="employees-employee-resource" class="resource"><h3 class="resource-heading">Employee Resource <a href="#employees-employee-resource" class="permalink">&nbsp;&para;</a></h3><p>Provide functions to create and retrieve employee information.</p>
 <div id="employees-employee-resource-post" class="action post"><h4 class="action-heading"><div class="name">Create employee</div><a href="#employees-employee-resource-post" class="method post">POST</a><code class="uri">/employees</code></h4><p>Register a new employe</p>
-<h4>Example URI</h4><div class="definition"><span class="method post">POST</span>&nbsp;<span class="uri"><span class="hostname"></span>/employees</span></div><div class="title"><strong>Request&nbsp;&nbsp;<code>success</code></strong><div class="collapse-button"><span class="close">Hide</span><span class="open">Show</span></div></div><div class="collapse-content"><div class="inner"><h5>Headers</h5><pre><code><span class="hljs-attribute">Content-Type</span>: <span class="hljs-string">application/json</span><br><span class="hljs-attribute">Accept</span>: <span class="hljs-string">application/json</span><br><span class="hljs-attribute">Authorization</span>: <span class="hljs-string">Bearer 123_sup3r_s3cr3t_t0k3n</span><br><span class="hljs-attribute">Host</span>: <span class="hljs-string">example.org</span></code></pre><div style="height: 1px;"></div><h5>Body</h5><pre><code>{}</code></pre><div style="height: 1px;"></div></div></div><div class="title"><strong>Response&nbsp;&nbsp;<code>200</code></strong><div class="collapse-button"><span class="close">Hide</span><span class="open">Show</span></div></div><div class="collapse-content"><div class="inner"><h5>Headers</h5><pre><code><span class="hljs-attribute">Content-Type</span>: <span class="hljs-string">application/json</span><br><span class="hljs-attribute">Content-Length</span>: <span class="hljs-string">378</span><br><span class="hljs-attribute">X-Content-Type-Options</span>: <span class="hljs-string">nosniff</span></code></pre><div style="height: 1px;"></div><h5>Body</h5><pre><code>{
+<h4>Example URI</h4><div class="definition"><span class="method post">POST</span>&nbsp;<span class="uri"><span class="hostname"></span>/employees</span></div><div class="title"><strong>Request&nbsp;&nbsp;<code>success</code></strong><div class="collapse-button"><span class="close">Hide</span><span class="open">Show</span></div></div><div class="collapse-content"><div class="inner"><h5>Headers</h5><pre><code><span class="hljs-attribute">Content-Type</span>: <span class="hljs-string">application/json</span><br><span class="hljs-attribute">Accept</span>: <span class="hljs-string">application/json</span><br><span class="hljs-attribute">Authorization</span>: <span class="hljs-string">Bearer 123_sup3r_s3cr3t_t0k3n</span><br><span class="hljs-attribute">Host</span>: <span class="hljs-string">example.org</span></code></pre><div style="height: 1px;"></div><h5>Body</h5><pre><code>{
+  "<span class="hljs-attribute">full_name</span>": <span class="hljs-value"><span class="hljs-string">"Mr. Rupert McLaughlin"</span></span>,
+  "<span class="hljs-attribute">email</span>": <span class="hljs-value"><span class="hljs-string">"mr.mclaughlin.rupert@company.com"</span></span>,
+  "<span class="hljs-attribute">gender</span>": <span class="hljs-value"><span class="hljs-string">"female"</span></span>,
+  "<span class="hljs-attribute">department</span>": <span class="hljs-value"><span class="hljs-string">"Real-Estate"</span></span>,
+  "<span class="hljs-attribute">phone_number</span>": <span class="hljs-value"><span class="hljs-string">"1-875-964-9937 x1274"</span></span>,
+  "<span class="hljs-attribute">address</span>": <span class="hljs-value"><span class="hljs-string">"23820 Rice Tunnel, Port Kimberely, WA 75300"</span>
+</span>}</code></pre><div style="height: 1px;"></div></div></div><div class="title"><strong>Response&nbsp;&nbsp;<code>200</code></strong><div class="collapse-button"><span class="close">Hide</span><span class="open">Show</span></div></div><div class="collapse-content"><div class="inner"><h5>Headers</h5><pre><code><span class="hljs-attribute">Content-Type</span>: <span class="hljs-string">application/json</span><br><span class="hljs-attribute">Content-Length</span>: <span class="hljs-string">377</span><br><span class="hljs-attribute">X-Content-Type-Options</span>: <span class="hljs-string">nosniff</span></code></pre><div style="height: 1px;"></div><h5>Body</h5><pre><code>{
   "<span class="hljs-attribute">data</span>": <span class="hljs-value">{
     "<span class="hljs-attribute">id</span>": <span class="hljs-value"><span class="hljs-number">1022</span></span>,
-    "<span class="hljs-attribute">full_name</span>": <span class="hljs-value"><span class="hljs-string">"Gaston Kuphal V"</span></span>,
-    "<span class="hljs-attribute">email</span>": <span class="hljs-value"><span class="hljs-string">"gaston.v.kuphal@company.com"</span></span>,
+    "<span class="hljs-attribute">full_name</span>": <span class="hljs-value"><span class="hljs-string">"Mr. Rupert McLaughlin"</span></span>,
+    "<span class="hljs-attribute">email</span>": <span class="hljs-value"><span class="hljs-string">"mr.mclaughlin.rupert@company.com"</span></span>,
     "<span class="hljs-attribute">gender</span>": <span class="hljs-value"><span class="hljs-string">"female"</span></span>,
-    "<span class="hljs-attribute">department</span>": <span class="hljs-value"><span class="hljs-string">"Community-Services"</span></span>,
-    "<span class="hljs-attribute">phone_number</span>": <span class="hljs-value"><span class="hljs-string">"418.082.5095 x94817"</span></span>,
-    "<span class="hljs-attribute">address</span>": <span class="hljs-value"><span class="hljs-string">"199 Michael Haven, North Aprilbury, VT 57731-8576"</span></span>,
+    "<span class="hljs-attribute">department</span>": <span class="hljs-value"><span class="hljs-string">"Real-Estate"</span></span>,
+    "<span class="hljs-attribute">phone_number</span>": <span class="hljs-value"><span class="hljs-string">"1-875-964-9937 x1274"</span></span>,
+    "<span class="hljs-attribute">address</span>": <span class="hljs-value"><span class="hljs-string">"23820 Rice Tunnel, Port Kimberely, WA 75300"</span></span>,
     "<span class="hljs-attribute">is_admin</span>": <span class="hljs-value"><span class="hljs-literal">false</span></span>,
-    "<span class="hljs-attribute">created_at</span>": <span class="hljs-value"><span class="hljs-string">"2021-03-06T18:32:47.736Z"</span></span>,
-    "<span class="hljs-attribute">updated_at</span>": <span class="hljs-value"><span class="hljs-string">"2021-03-06T18:32:47.736Z"</span>
+    "<span class="hljs-attribute">created_at</span>": <span class="hljs-value"><span class="hljs-string">"2021-03-13T08:53:19.561Z"</span></span>,
+    "<span class="hljs-attribute">updated_at</span>": <span class="hljs-value"><span class="hljs-string">"2021-03-13T08:53:19.561Z"</span>
   </span>}</span>,
   "<span class="hljs-attribute">meta</span>": <span class="hljs-value">{
     "<span class="hljs-attribute">password</span>": <span class="hljs-value"><span class="hljs-string">"123_s3cr3t_p4ssw0rd"</span>
@@ -173,19 +186,19 @@ It will return all assignments of every employee if authenticated user is an Adm
 </span>}</code></pre><div style="height: 1px;"></div></div></div></div><div id="employees-employee-resource-get" class="action get"><h4 class="action-heading"><div class="name">Get employees</div><a href="#employees-employee-resource-get" class="method get">GET</a><code class="uri">/employees</code></h4><p>Get list of employees</p>
 <h4>Example URI</h4><div class="definition"><span class="method get">GET</span>&nbsp;<span class="uri"><span class="hostname"></span>/employees</span></div><div class="title"><strong>URI Parameters</strong><div class="collapse-button show"><span class="close">Hide</span><span class="open">Show</span></div></div><div class="collapse-content"><dl class="inner"><dt>offset</dt><dd><code>integer</code>&nbsp;<span>(optional)</span>&nbsp;<span class="text-info default"><strong>Default:&nbsp;</strong><span>0</span></span>&nbsp;<p>The offset of nth record that will be fetched first</p>
 </dd><dt>limit</dt><dd><code>integer</code>&nbsp;<span>(optional)</span>&nbsp;<span class="text-info default"><strong>Default:&nbsp;</strong><span>10</span></span>&nbsp;<p>The maximum number of data that will be returned</p>
-</dd></dl></div><div class="title"><strong>Request&nbsp;&nbsp;<code>success</code></strong><div class="collapse-button"><span class="close">Hide</span><span class="open">Show</span></div></div><div class="collapse-content"><div class="inner"><h5>Headers</h5><pre><code><span class="hljs-attribute">Content-Type</span>: <span class="hljs-string">application/json</span><br><span class="hljs-attribute">Accept</span>: <span class="hljs-string">application/json</span><br><span class="hljs-attribute">Authorization</span>: <span class="hljs-string">Bearer 123_sup3r_s3cr3t_t0k3n</span><br><span class="hljs-attribute">Host</span>: <span class="hljs-string">example.org</span></code></pre><div style="height: 1px;"></div></div></div><div class="title"><strong>Response&nbsp;&nbsp;<code>200</code></strong><div class="collapse-button"><span class="close">Hide</span><span class="open">Show</span></div></div><div class="collapse-content"><div class="inner"><h5>Headers</h5><pre><code><span class="hljs-attribute">Content-Type</span>: <span class="hljs-string">application/json</span><br><span class="hljs-attribute">Content-Length</span>: <span class="hljs-string">363</span><br><span class="hljs-attribute">X-Content-Type-Options</span>: <span class="hljs-string">nosniff</span></code></pre><div style="height: 1px;"></div><h5>Body</h5><pre><code>{
+</dd></dl></div><div class="title"><strong>Request&nbsp;&nbsp;<code>success</code></strong><div class="collapse-button"><span class="close">Hide</span><span class="open">Show</span></div></div><div class="collapse-content"><div class="inner"><h5>Headers</h5><pre><code><span class="hljs-attribute">Content-Type</span>: <span class="hljs-string">application/json</span><br><span class="hljs-attribute">Accept</span>: <span class="hljs-string">application/json</span><br><span class="hljs-attribute">Authorization</span>: <span class="hljs-string">Bearer 123_sup3r_s3cr3t_t0k3n</span><br><span class="hljs-attribute">Host</span>: <span class="hljs-string">example.org</span></code></pre><div style="height: 1px;"></div></div></div><div class="title"><strong>Response&nbsp;&nbsp;<code>200</code></strong><div class="collapse-button"><span class="close">Hide</span><span class="open">Show</span></div></div><div class="collapse-content"><div class="inner"><h5>Headers</h5><pre><code><span class="hljs-attribute">Content-Type</span>: <span class="hljs-string">application/json</span><br><span class="hljs-attribute">Content-Length</span>: <span class="hljs-string">364</span><br><span class="hljs-attribute">X-Content-Type-Options</span>: <span class="hljs-string">nosniff</span></code></pre><div style="height: 1px;"></div><h5>Body</h5><pre><code>{
   "<span class="hljs-attribute">data</span>": <span class="hljs-value">[
     {
       "<span class="hljs-attribute">id</span>": <span class="hljs-value"><span class="hljs-number">1025</span></span>,
-      "<span class="hljs-attribute">full_name</span>": <span class="hljs-value"><span class="hljs-string">"Irene Jacobs"</span></span>,
-      "<span class="hljs-attribute">email</span>": <span class="hljs-value"><span class="hljs-string">"jacobs.irene@company.com"</span></span>,
+      "<span class="hljs-attribute">full_name</span>": <span class="hljs-value"><span class="hljs-string">"Sung Walker"</span></span>,
+      "<span class="hljs-attribute">email</span>": <span class="hljs-value"><span class="hljs-string">"sung_walker@company.com"</span></span>,
       "<span class="hljs-attribute">gender</span>": <span class="hljs-value"><span class="hljs-string">"female"</span></span>,
-      "<span class="hljs-attribute">department</span>": <span class="hljs-value"><span class="hljs-string">"Education"</span></span>,
-      "<span class="hljs-attribute">phone_number</span>": <span class="hljs-value"><span class="hljs-string">"(725) 061-3795 x5389"</span></span>,
-      "<span class="hljs-attribute">address</span>": <span class="hljs-value"><span class="hljs-string">"5168 Floria Groves, New Chington, IN 87205-3193"</span></span>,
+      "<span class="hljs-attribute">department</span>": <span class="hljs-value"><span class="hljs-string">"Marketing"</span></span>,
+      "<span class="hljs-attribute">phone_number</span>": <span class="hljs-value"><span class="hljs-string">"(643) 620-0341 x7595"</span></span>,
+      "<span class="hljs-attribute">address</span>": <span class="hljs-value"><span class="hljs-string">"2846 Kautzer Key, North Spencerfurt, SC 27475-5597"</span></span>,
       "<span class="hljs-attribute">is_admin</span>": <span class="hljs-value"><span class="hljs-literal">false</span></span>,
-      "<span class="hljs-attribute">created_at</span>": <span class="hljs-value"><span class="hljs-string">"2021-03-06T18:32:48.378Z"</span></span>,
-      "<span class="hljs-attribute">updated_at</span>": <span class="hljs-value"><span class="hljs-string">"2021-03-06T18:32:48.378Z"</span>
+      "<span class="hljs-attribute">created_at</span>": <span class="hljs-value"><span class="hljs-string">"2021-03-13T08:53:20.206Z"</span></span>,
+      "<span class="hljs-attribute">updated_at</span>": <span class="hljs-value"><span class="hljs-string">"2021-03-13T08:53:20.206Z"</span>
     </span>}
   ]</span>,
   "<span class="hljs-attribute">meta</span>": <span class="hljs-value">{
@@ -196,18 +209,25 @@ It will return all assignments of every employee if authenticated user is an Adm
 </span>}</code></pre><div style="height: 1px;"></div></div></div></div></div><div id="employees-employee-detail" class="resource"><h3 class="resource-heading">Employee Detail <a href="#employees-employee-detail" class="permalink">&nbsp;&para;</a></h3><p>Provide functions to manipulate employee information.</p>
 <div id="employees-employee-detail-patch" class="action patch"><h4 class="action-heading"><div class="name">Update employee</div><a href="#employees-employee-detail-patch" class="method patch">PATCH</a><code class="uri">/employees/{employee_id}</code></h4><p>Update a employee that match with given id</p>
 <h4>Example URI</h4><div class="definition"><span class="method patch">PATCH</span>&nbsp;<span class="uri"><span class="hostname"></span>/employees/<span class="hljs-attribute" title="employee_id">employee_id</span></span></div><div class="title"><strong>URI Parameters</strong><div class="collapse-button show"><span class="close">Hide</span><span class="open">Show</span></div></div><div class="collapse-content"><dl class="inner"><dt>employee_id</dt><dd><code>integer</code>&nbsp;<span class="required">(required)</span>&nbsp;<p>The id of employee that will be modified</p>
-</dd></dl></div><div class="title"><strong>Request&nbsp;&nbsp;<code>success</code></strong><div class="collapse-button"><span class="close">Hide</span><span class="open">Show</span></div></div><div class="collapse-content"><div class="inner"><h5>Headers</h5><pre><code><span class="hljs-attribute">Content-Type</span>: <span class="hljs-string">application/json</span><br><span class="hljs-attribute">Accept</span>: <span class="hljs-string">application/json</span><br><span class="hljs-attribute">Authorization</span>: <span class="hljs-string">Bearer 123_sup3r_s3cr3t_t0k3n</span><br><span class="hljs-attribute">Host</span>: <span class="hljs-string">example.org</span></code></pre><div style="height: 1px;"></div><h5>Body</h5><pre><code>{}</code></pre><div style="height: 1px;"></div></div></div><div class="title"><strong>Response&nbsp;&nbsp;<code>200</code></strong><div class="collapse-button"><span class="close">Hide</span><span class="open">Show</span></div></div><div class="collapse-content"><div class="inner"><h5>Headers</h5><pre><code><span class="hljs-attribute">Content-Type</span>: <span class="hljs-string">application/json</span><br><span class="hljs-attribute">Content-Length</span>: <span class="hljs-string">325</span><br><span class="hljs-attribute">X-Content-Type-Options</span>: <span class="hljs-string">nosniff</span></code></pre><div style="height: 1px;"></div><h5>Body</h5><pre><code>{
+</dd></dl></div><div class="title"><strong>Request&nbsp;&nbsp;<code>success</code></strong><div class="collapse-button"><span class="close">Hide</span><span class="open">Show</span></div></div><div class="collapse-content"><div class="inner"><h5>Headers</h5><pre><code><span class="hljs-attribute">Content-Type</span>: <span class="hljs-string">application/json</span><br><span class="hljs-attribute">Accept</span>: <span class="hljs-string">application/json</span><br><span class="hljs-attribute">Authorization</span>: <span class="hljs-string">Bearer 123_sup3r_s3cr3t_t0k3n</span><br><span class="hljs-attribute">Host</span>: <span class="hljs-string">example.org</span></code></pre><div style="height: 1px;"></div><h5>Body</h5><pre><code>{
+  "<span class="hljs-attribute">full_name</span>": <span class="hljs-value"><span class="hljs-string">"Tanner Brakus"</span></span>,
+  "<span class="hljs-attribute">email</span>": <span class="hljs-value"><span class="hljs-string">"tanner.brakus@company.com"</span></span>,
+  "<span class="hljs-attribute">gender</span>": <span class="hljs-value"><span class="hljs-string">"female"</span></span>,
+  "<span class="hljs-attribute">department</span>": <span class="hljs-value"><span class="hljs-string">"Design"</span></span>,
+  "<span class="hljs-attribute">phone_number</span>": <span class="hljs-value"><span class="hljs-string">"390.805.4159"</span></span>,
+  "<span class="hljs-attribute">address</span>": <span class="hljs-value"><span class="hljs-string">"81467 Pfeffer Extensions, Shanahanview, MD 49268"</span>
+</span>}</code></pre><div style="height: 1px;"></div></div></div><div class="title"><strong>Response&nbsp;&nbsp;<code>200</code></strong><div class="collapse-button"><span class="close">Hide</span><span class="open">Show</span></div></div><div class="collapse-content"><div class="inner"><h5>Headers</h5><pre><code><span class="hljs-attribute">Content-Type</span>: <span class="hljs-string">application/json</span><br><span class="hljs-attribute">Content-Length</span>: <span class="hljs-string">312</span><br><span class="hljs-attribute">X-Content-Type-Options</span>: <span class="hljs-string">nosniff</span></code></pre><div style="height: 1px;"></div><h5>Body</h5><pre><code>{
   "<span class="hljs-attribute">data</span>": <span class="hljs-value">{
     "<span class="hljs-attribute">id</span>": <span class="hljs-value"><span class="hljs-number">1027</span></span>,
-    "<span class="hljs-attribute">full_name</span>": <span class="hljs-value"><span class="hljs-string">"Genesis McCullough"</span></span>,
-    "<span class="hljs-attribute">email</span>": <span class="hljs-value"><span class="hljs-string">"genesis_mccullough@company.com"</span></span>,
-    "<span class="hljs-attribute">gender</span>": <span class="hljs-value"><span class="hljs-string">"male"</span></span>,
-    "<span class="hljs-attribute">department</span>": <span class="hljs-value"><span class="hljs-string">"Education"</span></span>,
-    "<span class="hljs-attribute">phone_number</span>": <span class="hljs-value"><span class="hljs-string">"594-195-7868 x82069"</span></span>,
-    "<span class="hljs-attribute">address</span>": <span class="hljs-value"><span class="hljs-string">"968 Angelo Loop, West Alphonseton, SD 47902"</span></span>,
+    "<span class="hljs-attribute">full_name</span>": <span class="hljs-value"><span class="hljs-string">"Tanner Brakus"</span></span>,
+    "<span class="hljs-attribute">email</span>": <span class="hljs-value"><span class="hljs-string">"tanner.brakus@company.com"</span></span>,
+    "<span class="hljs-attribute">gender</span>": <span class="hljs-value"><span class="hljs-string">"female"</span></span>,
+    "<span class="hljs-attribute">department</span>": <span class="hljs-value"><span class="hljs-string">"Design"</span></span>,
+    "<span class="hljs-attribute">phone_number</span>": <span class="hljs-value"><span class="hljs-string">"390.805.4159"</span></span>,
+    "<span class="hljs-attribute">address</span>": <span class="hljs-value"><span class="hljs-string">"81467 Pfeffer Extensions, Shanahanview, MD 49268"</span></span>,
     "<span class="hljs-attribute">is_admin</span>": <span class="hljs-value"><span class="hljs-literal">false</span></span>,
-    "<span class="hljs-attribute">created_at</span>": <span class="hljs-value"><span class="hljs-string">"2021-03-06T18:32:48.698Z"</span></span>,
-    "<span class="hljs-attribute">updated_at</span>": <span class="hljs-value"><span class="hljs-string">"2021-03-06T18:32:48.698Z"</span>
+    "<span class="hljs-attribute">created_at</span>": <span class="hljs-value"><span class="hljs-string">"2021-03-13T08:53:20.525Z"</span></span>,
+    "<span class="hljs-attribute">updated_at</span>": <span class="hljs-value"><span class="hljs-string">"2021-03-13T08:53:20.525Z"</span>
   </span>}
 </span>}</code></pre><div style="height: 1px;"></div></div></div></div></div></section><section id="questions" class="resource-group"><h2 class="group-heading">Questions <a href="#questions" class="permalink">&para;</a></h2><p>Provide functions to manage <code>Question</code> resources.</p>
 <div id="questions-question-resource" class="resource"><h3 class="resource-heading">Question Resource <a href="#questions-question-resource" class="permalink">&nbsp;&para;</a></h3><p>Provide functions to create and retrieve feedback questions that need to be answered by employees.</p>
@@ -218,8 +238,8 @@ It will return all assignments of every employee if authenticated user is an Adm
   "<span class="hljs-attribute">data</span>": <span class="hljs-value">{
     "<span class="hljs-attribute">id</span>": <span class="hljs-value"><span class="hljs-number">1029</span></span>,
     "<span class="hljs-attribute">description</span>": <span class="hljs-value"><span class="hljs-string">"What did this person do well?"</span></span>,
-    "<span class="hljs-attribute">created_at</span>": <span class="hljs-value"><span class="hljs-string">"2021-03-06T18:32:48.871Z"</span></span>,
-    "<span class="hljs-attribute">updated_at</span>": <span class="hljs-value"><span class="hljs-string">"2021-03-06T18:32:48.871Z"</span></span>,
+    "<span class="hljs-attribute">created_at</span>": <span class="hljs-value"><span class="hljs-string">"2021-03-13T08:53:20.693Z"</span></span>,
+    "<span class="hljs-attribute">updated_at</span>": <span class="hljs-value"><span class="hljs-string">"2021-03-13T08:53:20.693Z"</span></span>,
     "<span class="hljs-attribute">deleted_at</span>": <span class="hljs-value"><span class="hljs-literal">null</span>
   </span>}
 </span>}</code></pre><div style="height: 1px;"></div></div></div><div class="title"><strong>Request&nbsp;&nbsp;<code>bad request</code></strong><div class="collapse-button"><span class="close">Hide</span><span class="open">Show</span></div></div><div class="collapse-content"><div class="inner"><h5>Headers</h5><pre><code><span class="hljs-attribute">Content-Type</span>: <span class="hljs-string">application/json</span><br><span class="hljs-attribute">Accept</span>: <span class="hljs-string">application/json</span><br><span class="hljs-attribute">Authorization</span>: <span class="hljs-string">Bearer 123_sup3r_s3cr3t_t0k3n</span><br><span class="hljs-attribute">Host</span>: <span class="hljs-string">example.org</span></code></pre><div style="height: 1px;"></div><h5>Body</h5><pre><code>{
@@ -241,8 +261,8 @@ It will return all assignments of every employee if authenticated user is an Adm
     {
       "<span class="hljs-attribute">id</span>": <span class="hljs-value"><span class="hljs-number">1032</span></span>,
       "<span class="hljs-attribute">description</span>": <span class="hljs-value"><span class="hljs-string">"What did this person do well?"</span></span>,
-      "<span class="hljs-attribute">created_at</span>": <span class="hljs-value"><span class="hljs-string">"2021-03-06T18:32:49.212Z"</span></span>,
-      "<span class="hljs-attribute">updated_at</span>": <span class="hljs-value"><span class="hljs-string">"2021-03-06T18:32:49.212Z"</span></span>,
+      "<span class="hljs-attribute">created_at</span>": <span class="hljs-value"><span class="hljs-string">"2021-03-13T08:53:21.017Z"</span></span>,
+      "<span class="hljs-attribute">updated_at</span>": <span class="hljs-value"><span class="hljs-string">"2021-03-13T08:53:21.017Z"</span></span>,
       "<span class="hljs-attribute">deleted_at</span>": <span class="hljs-value"><span class="hljs-literal">null</span>
     </span>}
   ]</span>,
@@ -260,8 +280,8 @@ It will return all assignments of every employee if authenticated user is an Adm
   "<span class="hljs-attribute">data</span>": <span class="hljs-value">{
     "<span class="hljs-attribute">id</span>": <span class="hljs-value"><span class="hljs-number">1034</span></span>,
     "<span class="hljs-attribute">description</span>": <span class="hljs-value"><span class="hljs-string">"What did this person do well?"</span></span>,
-    "<span class="hljs-attribute">created_at</span>": <span class="hljs-value"><span class="hljs-string">"2021-03-06T18:32:49.385Z"</span></span>,
-    "<span class="hljs-attribute">updated_at</span>": <span class="hljs-value"><span class="hljs-string">"2021-03-06T18:32:49.385Z"</span></span>,
+    "<span class="hljs-attribute">created_at</span>": <span class="hljs-value"><span class="hljs-string">"2021-03-13T08:53:21.181Z"</span></span>,
+    "<span class="hljs-attribute">updated_at</span>": <span class="hljs-value"><span class="hljs-string">"2021-03-13T08:53:21.181Z"</span></span>,
     "<span class="hljs-attribute">deleted_at</span>": <span class="hljs-value"><span class="hljs-literal">null</span>
   </span>}
 </span>}</code></pre><div style="height: 1px;"></div></div></div></div><div id="questions-question-detail-delete" class="action delete"><h4 class="action-heading"><div class="name">Delete question</div><a href="#questions-question-detail-delete" class="method delete">DELETE</a><code class="uri">/questions/{question_id}</code></h4><p>Delete a question that match with given id</p>
@@ -270,8 +290,8 @@ It will return all assignments of every employee if authenticated user is an Adm
   "<span class="hljs-attribute">data</span>": <span class="hljs-value">{
     "<span class="hljs-attribute">id</span>": <span class="hljs-value"><span class="hljs-number">1036</span></span>,
     "<span class="hljs-attribute">description</span>": <span class="hljs-value"><span class="hljs-string">"What did this person do well?"</span></span>,
-    "<span class="hljs-attribute">created_at</span>": <span class="hljs-value"><span class="hljs-string">"2021-03-06T18:32:49.556Z"</span></span>,
-    "<span class="hljs-attribute">updated_at</span>": <span class="hljs-value"><span class="hljs-string">"2021-03-06T18:32:49.556Z"</span></span>,
+    "<span class="hljs-attribute">created_at</span>": <span class="hljs-value"><span class="hljs-string">"2021-03-13T08:53:21.344Z"</span></span>,
+    "<span class="hljs-attribute">updated_at</span>": <span class="hljs-value"><span class="hljs-string">"2021-03-13T08:53:21.344Z"</span></span>,
     "<span class="hljs-attribute">deleted_at</span>": <span class="hljs-value"><span class="hljs-literal">null</span>
   </span>}
 </span>}</code></pre><div style="height: 1px;"></div></div></div></div></div></section><section id="reviews" class="resource-group"><h2 class="group-heading">Reviews <a href="#reviews" class="permalink">&para;</a></h2><p>Provide functions to manage <code>Review</code> resources.</p>
@@ -282,21 +302,22 @@ It will return all assignments of every employee if authenticated user is an Adm
   "<span class="hljs-attribute">answers</span>": <span class="hljs-value">[
     {
       "<span class="hljs-attribute">question_id</span>": <span class="hljs-value"><span class="hljs-number">1</span></span>,
-      "<span class="hljs-attribute">answer</span>": <span class="hljs-value"><span class="hljs-string">"Quo illum ducimus. Dolorem aut esse. Perspiciatis non quisquam.Est dolores voluptas. Possimus fugit quod. Quibusdam nulla modi."</span>
+      "<span class="hljs-attribute">answer</span>": <span class="hljs-value"><span class="hljs-string">"Neque deserunt quo. Deleniti consequatur necessitatibus. Ut fugit assumenda.Suscipit minus sunt. Aperiam harum ullam. Consequatur ipsum nihil."</span>
     </span>},
     {
       "<span class="hljs-attribute">question_id</span>": <span class="hljs-value"><span class="hljs-number">2</span></span>,
-      "<span class="hljs-attribute">answer</span>": <span class="hljs-value"><span class="hljs-string">"Illum temporibus nesciunt. Nisi autem qui. Et occaecati vero.Rerum voluptate voluptatem. Magni ducimus explicabo. Nisi voluptas ullam."</span>
+      "<span class="hljs-attribute">answer</span>": <span class="hljs-value"><span class="hljs-string">"Voluptas labore aspernatur. Dolor omnis molestiae. Voluptatum recusandae officiis.Quis nemo sed. Optio suscipit vitae. Vero aut non."</span>
     </span>}
   ]
-</span>}</code></pre><div style="height: 1px;"></div></div></div><div class="title"><strong>Response&nbsp;&nbsp;<code>200</code></strong><div class="collapse-button"><span class="close">Hide</span><span class="open">Show</span></div></div><div class="collapse-content"><div class="inner"><h5>Headers</h5><pre><code><span class="hljs-attribute">Content-Type</span>: <span class="hljs-string">application/json</span><br><span class="hljs-attribute">Content-Length</span>: <span class="hljs-string">699</span><br><span class="hljs-attribute">X-Content-Type-Options</span>: <span class="hljs-string">nosniff</span></code></pre><div style="height: 1px;"></div><h5>Body</h5><pre><code>{
+</span>}</code></pre><div style="height: 1px;"></div></div></div><div class="title"><strong>Response&nbsp;&nbsp;<code>200</code></strong><div class="collapse-button"><span class="close">Hide</span><span class="open">Show</span></div></div><div class="collapse-content"><div class="inner"><h5>Headers</h5><pre><code><span class="hljs-attribute">Content-Type</span>: <span class="hljs-string">application/json</span><br><span class="hljs-attribute">Content-Length</span>: <span class="hljs-string">750</span><br><span class="hljs-attribute">X-Content-Type-Options</span>: <span class="hljs-string">nosniff</span></code></pre><div style="height: 1px;"></div><h5>Body</h5><pre><code>{
   "<span class="hljs-attribute">data</span>": <span class="hljs-value">[
     {
       "<span class="hljs-attribute">id</span>": <span class="hljs-value"><span class="hljs-number">1042</span></span>,
       "<span class="hljs-attribute">assignment_id</span>": <span class="hljs-value"><span class="hljs-literal">null</span></span>,
-      "<span class="hljs-attribute">answer</span>": <span class="hljs-value"><span class="hljs-string">"Quo illum ducimus. Dolorem aut esse. Perspiciatis non quisquam.Est dolores voluptas. Possimus fugit quod. Quibusdam nulla modi."</span></span>,
-      "<span class="hljs-attribute">created_at</span>": <span class="hljs-value"><span class="hljs-string">"2021-03-06T18:32:50.239Z"</span></span>,
-      "<span class="hljs-attribute">updated_at</span>": <span class="hljs-value"><span class="hljs-string">"2021-03-06T18:32:50.239Z"</span></span>,
+      "<span class="hljs-attribute">question_id</span>": <span class="hljs-value"><span class="hljs-number">1041</span></span>,
+      "<span class="hljs-attribute">answer</span>": <span class="hljs-value"><span class="hljs-string">"Neque deserunt quo. Deleniti consequatur necessitatibus. Ut fugit assumenda.Suscipit minus sunt. Aperiam harum ullam. Consequatur ipsum nihil."</span></span>,
+      "<span class="hljs-attribute">created_at</span>": <span class="hljs-value"><span class="hljs-string">"2021-03-13T08:53:21.987Z"</span></span>,
+      "<span class="hljs-attribute">updated_at</span>": <span class="hljs-value"><span class="hljs-string">"2021-03-13T08:53:21.987Z"</span></span>,
       "<span class="hljs-attribute">question</span>": <span class="hljs-value">{
         "<span class="hljs-attribute">id</span>": <span class="hljs-value"><span class="hljs-number">1041</span></span>,
         "<span class="hljs-attribute">description</span>": <span class="hljs-value"><span class="hljs-string">"What did this person do well?"</span>
@@ -305,9 +326,10 @@ It will return all assignments of every employee if authenticated user is an Adm
     {
       "<span class="hljs-attribute">id</span>": <span class="hljs-value"><span class="hljs-number">1044</span></span>,
       "<span class="hljs-attribute">assignment_id</span>": <span class="hljs-value"><span class="hljs-literal">null</span></span>,
-      "<span class="hljs-attribute">answer</span>": <span class="hljs-value"><span class="hljs-string">"Illum temporibus nesciunt. Nisi autem qui. Et occaecati vero.Rerum voluptate voluptatem. Magni ducimus explicabo. Nisi voluptas ullam."</span></span>,
-      "<span class="hljs-attribute">created_at</span>": <span class="hljs-value"><span class="hljs-string">"2021-03-06T18:32:50.242Z"</span></span>,
-      "<span class="hljs-attribute">updated_at</span>": <span class="hljs-value"><span class="hljs-string">"2021-03-06T18:32:50.242Z"</span></span>,
+      "<span class="hljs-attribute">question_id</span>": <span class="hljs-value"><span class="hljs-number">1043</span></span>,
+      "<span class="hljs-attribute">answer</span>": <span class="hljs-value"><span class="hljs-string">"Voluptas labore aspernatur. Dolor omnis molestiae. Voluptatum recusandae officiis.Quis nemo sed. Optio suscipit vitae. Vero aut non."</span></span>,
+      "<span class="hljs-attribute">created_at</span>": <span class="hljs-value"><span class="hljs-string">"2021-03-13T08:53:21.988Z"</span></span>,
+      "<span class="hljs-attribute">updated_at</span>": <span class="hljs-value"><span class="hljs-string">"2021-03-13T08:53:21.988Z"</span></span>,
       "<span class="hljs-attribute">question</span>": <span class="hljs-value">{
         "<span class="hljs-attribute">id</span>": <span class="hljs-value"><span class="hljs-number">1043</span></span>,
         "<span class="hljs-attribute">description</span>": <span class="hljs-value"><span class="hljs-string">"What did this person do well?"</span>
@@ -323,7 +345,7 @@ It will return all assignments of every employee if authenticated user is an Adm
   "<span class="hljs-attribute">answers</span>": <span class="hljs-value">[
     {
       "<span class="hljs-attribute">question_id</span>": <span class="hljs-value"><span class="hljs-number">1</span></span>,
-      "<span class="hljs-attribute">answer</span>": <span class="hljs-value"><span class="hljs-string">"Quos occaecati cumque. Minima voluptatum esse. Vero et ipsum.Ex deleniti voluptatibus. Nobis labore quo. Sint voluptas alias."</span>
+      "<span class="hljs-attribute">answer</span>": <span class="hljs-value"><span class="hljs-string">"Corrupti ea atque. Facilis nobis odit. Libero quaerat atque.Consectetur officiis et. Qui nemo doloremque. Officiis consequuntur enim."</span>
     </span>},
     {
       "<span class="hljs-attribute">foo</span>": <span class="hljs-value"><span class="hljs-string">"bar"</span></span>,
@@ -363,14 +385,15 @@ It will return all assignments of every employee if authenticated user is an Adm
 Administrator will be able to see reviews that submitted by any employees.</p>
 <h4>Example URI</h4><div class="definition"><span class="method get">GET</span>&nbsp;<span class="uri"><span class="hostname"></span>/assignments/reviews</span></div><div class="title"><strong>URI Parameters</strong><div class="collapse-button show"><span class="close">Hide</span><span class="open">Show</span></div></div><div class="collapse-content"><dl class="inner"><dt>offset</dt><dd><code>integer</code>&nbsp;<span>(optional)</span>&nbsp;<span class="text-info default"><strong>Default:&nbsp;</strong><span>0</span></span>&nbsp;<p>The offset of nth record that will be fetched first</p>
 </dd><dt>limit</dt><dd><code>integer</code>&nbsp;<span>(optional)</span>&nbsp;<span class="text-info default"><strong>Default:&nbsp;</strong><span>10</span></span>&nbsp;<p>The maximum number of data that will be returned</p>
-</dd></dl></div><div class="title"><strong>Request&nbsp;&nbsp;<code>success</code></strong><div class="collapse-button"><span class="close">Hide</span><span class="open">Show</span></div></div><div class="collapse-content"><div class="inner"><h5>Headers</h5><pre><code><span class="hljs-attribute">Content-Type</span>: <span class="hljs-string">application/json</span><br><span class="hljs-attribute">Accept</span>: <span class="hljs-string">application/json</span><br><span class="hljs-attribute">Authorization</span>: <span class="hljs-string">Bearer 123_sup3r_s3cr3t_t0k3n</span><br><span class="hljs-attribute">Host</span>: <span class="hljs-string">example.org</span></code></pre><div style="height: 1px;"></div></div></div><div class="title"><strong>Response&nbsp;&nbsp;<code>200</code></strong><div class="collapse-button"><span class="close">Hide</span><span class="open">Show</span></div></div><div class="collapse-content"><div class="inner"><h5>Headers</h5><pre><code><span class="hljs-attribute">Content-Type</span>: <span class="hljs-string">application/json</span><br><span class="hljs-attribute">Content-Length</span>: <span class="hljs-string">642</span><br><span class="hljs-attribute">X-Content-Type-Options</span>: <span class="hljs-string">nosniff</span></code></pre><div style="height: 1px;"></div><h5>Body</h5><pre><code>{
+</dd></dl></div><div class="title"><strong>Request&nbsp;&nbsp;<code>success</code></strong><div class="collapse-button"><span class="close">Hide</span><span class="open">Show</span></div></div><div class="collapse-content"><div class="inner"><h5>Headers</h5><pre><code><span class="hljs-attribute">Content-Type</span>: <span class="hljs-string">application/json</span><br><span class="hljs-attribute">Accept</span>: <span class="hljs-string">application/json</span><br><span class="hljs-attribute">Authorization</span>: <span class="hljs-string">Bearer 123_sup3r_s3cr3t_t0k3n</span><br><span class="hljs-attribute">Host</span>: <span class="hljs-string">example.org</span></code></pre><div style="height: 1px;"></div></div></div><div class="title"><strong>Response&nbsp;&nbsp;<code>200</code></strong><div class="collapse-button"><span class="close">Hide</span><span class="open">Show</span></div></div><div class="collapse-content"><div class="inner"><h5>Headers</h5><pre><code><span class="hljs-attribute">Content-Type</span>: <span class="hljs-string">application/json</span><br><span class="hljs-attribute">Content-Length</span>: <span class="hljs-string">688</span><br><span class="hljs-attribute">X-Content-Type-Options</span>: <span class="hljs-string">nosniff</span></code></pre><div style="height: 1px;"></div><h5>Body</h5><pre><code>{
   "<span class="hljs-attribute">data</span>": <span class="hljs-value">[
     {
       "<span class="hljs-attribute">id</span>": <span class="hljs-value"><span class="hljs-number">1060</span></span>,
       "<span class="hljs-attribute">assignment_id</span>": <span class="hljs-value"><span class="hljs-literal">null</span></span>,
-      "<span class="hljs-attribute">answer</span>": <span class="hljs-value"><span class="hljs-string">"Hic minima quae. Architecto error sit. Optio amet aliquid.Nemo sint ratione. Quam earum qui. Saepe praesentium et."</span></span>,
-      "<span class="hljs-attribute">created_at</span>": <span class="hljs-value"><span class="hljs-string">"2021-03-06T18:32:51.591Z"</span></span>,
-      "<span class="hljs-attribute">updated_at</span>": <span class="hljs-value"><span class="hljs-string">"2021-03-06T18:32:51.591Z"</span></span>,
+      "<span class="hljs-attribute">question_id</span>": <span class="hljs-value"><span class="hljs-number">1059</span></span>,
+      "<span class="hljs-attribute">answer</span>": <span class="hljs-value"><span class="hljs-string">"Excepturi facilis dicta. Et aut ut. Quis nostrum quasi.Animi ut reprehenderit. Animi velit praesentium. Sed adipisci suscipit."</span></span>,
+      "<span class="hljs-attribute">created_at</span>": <span class="hljs-value"><span class="hljs-string">"2021-03-13T08:53:23.271Z"</span></span>,
+      "<span class="hljs-attribute">updated_at</span>": <span class="hljs-value"><span class="hljs-string">"2021-03-13T08:53:23.271Z"</span></span>,
       "<span class="hljs-attribute">question</span>": <span class="hljs-value">{
         "<span class="hljs-attribute">id</span>": <span class="hljs-value"><span class="hljs-number">1059</span></span>,
         "<span class="hljs-attribute">description</span>": <span class="hljs-value"><span class="hljs-string">"What did this person do well?"</span>
@@ -379,16 +402,17 @@ Administrator will be able to see reviews that submitted by any employees.</p>
     {
       "<span class="hljs-attribute">id</span>": <span class="hljs-value"><span class="hljs-number">1062</span></span>,
       "<span class="hljs-attribute">assignment_id</span>": <span class="hljs-value"><span class="hljs-literal">null</span></span>,
-      "<span class="hljs-attribute">answer</span>": <span class="hljs-value"><span class="hljs-string">"Alias molestiae quasi. Asperiores ut vitae. Itaque perspiciatis et.Ipsa corporis itaque. Quo illum quibusdam. Eaque impedit ipsum."</span></span>,
-      "<span class="hljs-attribute">created_at</span>": <span class="hljs-value"><span class="hljs-string">"2021-03-06T18:32:51.592Z"</span></span>,
-      "<span class="hljs-attribute">updated_at</span>": <span class="hljs-value"><span class="hljs-string">"2021-03-06T18:32:51.592Z"</span></span>,
+      "<span class="hljs-attribute">question_id</span>": <span class="hljs-value"><span class="hljs-number">1061</span></span>,
+      "<span class="hljs-attribute">answer</span>": <span class="hljs-value"><span class="hljs-string">"Sit inventore et. Nulla consectetur occaecati. Et eos magni.Illo magni sapiente. Accusamus culpa aliquam. Impedit nemo veniam."</span></span>,
+      "<span class="hljs-attribute">created_at</span>": <span class="hljs-value"><span class="hljs-string">"2021-03-13T08:53:23.272Z"</span></span>,
+      "<span class="hljs-attribute">updated_at</span>": <span class="hljs-value"><span class="hljs-string">"2021-03-13T08:53:23.272Z"</span></span>,
       "<span class="hljs-attribute">question</span>": <span class="hljs-value">{
         "<span class="hljs-attribute">id</span>": <span class="hljs-value"><span class="hljs-number">1061</span></span>,
         "<span class="hljs-attribute">description</span>": <span class="hljs-value"><span class="hljs-string">"What did this person do well?"</span>
       </span>}
     </span>}
   ]
-</span>}</code></pre><div style="height: 1px;"></div></div></div></div></div></section></div></div></div><p style="text-align: center;" class="text-muted">Generated by&nbsp;<a href="https://github.com/danielgtaylor/aglio" class="aglio">aglio</a>&nbsp;on 07 Mar 2021</p><script>/* eslint-env browser */
+</span>}</code></pre><div style="height: 1px;"></div></div></div></div></div></section></div></div></div><p style="text-align: center;" class="text-muted">Generated by&nbsp;<a href="https://github.com/danielgtaylor/aglio" class="aglio">aglio</a>&nbsp;on 13 Mar 2021</p><script>/* eslint-env browser */
 /* eslint quotes: [2, "single"] */
 'use strict';
 
