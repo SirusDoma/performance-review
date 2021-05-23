@@ -12,7 +12,11 @@ module EmployeeService
 
     def perform
       if @criteria.present?
-        query = Employee.where(@criteria)
+        query = Employee
+        @criteria.each do |key, val|
+          query = query.where(Employee.arel_table[key.to_sym].matches("%#{val}%"))
+        end
+
         total = query.count
       else
         query = Employee
