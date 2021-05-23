@@ -11,23 +11,18 @@ module EmployeeService
     end
 
     def perform
-      if @criteria.present?
-        query = Employee
-        @criteria.each do |key, val|
-          if Employee.type_for_attribute(key).type == :string
-            query = query.where(Employee.arel_table[key].matches("%#{val}%"))
-          else
-            query = query.where(Hash[key, val])
-          end
+      query = Employee
+      @criteria.each do |key, val|
+        if Employee.type_for_attribute(key).type == :string
+          query = query.where(Employee.arel_table[key].matches("%#{val}%"))
+        else
+          query = query.where(Hash[key, val])
         end
-
-        total = query.count
-      else
-        query = Employee
-        total = Employee.count
       end
 
+      total  = query.count
       result = query.offset(@offset).limit(@limit)
+
       [result, @offset, @limit, total]
     end
   end
