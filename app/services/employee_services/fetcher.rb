@@ -7,14 +7,18 @@ module EmployeeService
 
       @offset   = offset || 0
       @limit    = limit  || 10
-      @criteria = criteria.select { |_, val| val.present? } || {}
+      @criteria = criteria.select { |_, val| val.present? }.symbolize_keys || {}
     end
 
     def perform
       if @criteria.present?
         query = Employee
         @criteria.each do |key, val|
-          query = query.where(Employee.arel_table[key.to_sym].matches("%#{val}%"))
+          if Employee.type_for_attribute(key).type == :string
+            query = query.where(Employee.arel_table[key].matches("%#{val}%"))
+          else
+            query = query.where(Hash[key, val])
+          end
         end
 
         total = query.count
